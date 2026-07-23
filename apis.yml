@@ -1,0 +1,128 @@
+aid: chase-uk
+url: https://raw.githubusercontent.com/api-evangelist/chase-uk/refs/heads/main/apis.yml
+name: Chase UK
+kind: company
+description: >-
+  Chase UK is the digital retail bank operated in the United Kingdom by J.P.
+  Morgan Europe Limited, a wholly owned subsidiary of JPMorgan Chase & Co. that
+  launched the Chase consumer brand in the UK in September 2021. It is an
+  app-only challenger bank with no physical branches or ATM estate, offering
+  current accounts, savings, and round-up features to personal customers, and
+  is authorised and regulated in the UK by the Financial Conduct Authority (FCA)
+  and the Prudential Regulation Authority (PRA). As a Payment Services
+  Regulations 2017 account provider (ASPSP), Chase UK operates a dedicated Open
+  Banking interface conformant to the UK Open Banking Implementation Entity
+  (OBIE) Read/Write API Standard, exposing Account Information (AIS), Payment
+  Initiation (PIS), and Confirmation of Funds (CBPII) services to FCA-authorised
+  third-party providers. It is not one of the CMA9 mandated banks; access is
+  granted through its developer sandbox and secured with FAPI-grade OAuth2/OIDC,
+  PSD2 strong customer authentication, and mutual-TLS using eIDAS QWAC or OBWAC
+  certificates from the Open Banking Certificate Authority.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Financial Services
+- Banking
+- Open Banking
+- PSD2
+- OBIE
+- United Kingdom
+- Payments
+- Account Information
+- Challenger Bank
+- Fintech
+created: '2026-07-23'
+modified: '2026-07-23'
+specificationVersion: '0.19'
+apis:
+- aid: chase-uk:chase-uk-account-information-api
+  name: Chase UK Account and Transaction Information API (AIS)
+  description: >-
+    Chase UK's Account Information Service (AIS) dedicated interface, conformant
+    to the OBIE Read/Write API Standard, letting FCA-authorised AISPs retrieve a
+    consenting customer's account, balance, transaction, beneficiary, standing
+    order, direct debit, and statement data. Access is gated behind developer
+    onboarding and secured with FAPI OAuth2/OIDC, PSD2 SCA, and mutual-TLS. The
+    referenced OpenAPI is the shared OBIE standard specification (v4.0.1), not a
+    Chase-proprietary contract.
+  humanURL: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  tags:
+  - Account Information
+  - AISP
+  - Open Banking
+  properties:
+  - type: OpenAPI
+    url: openapi/obie-account-info-openapi.yaml
+  - type: Documentation
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  - type: Documentation
+    url: https://www.chase.co.uk/gb/en/information-for-tpps/
+  - type: DeveloperPortal
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/
+- aid: chase-uk:chase-uk-payment-initiation-api
+  name: Chase UK Payment Initiation API (PIS)
+  description: >-
+    Chase UK's Payment Initiation Service (PIS) dedicated interface, conformant
+    to the OBIE Read/Write API Standard, enabling FCA-authorised PISPs to create
+    single immediate payments, future-dated payments, and standing orders to UK
+    accounts on behalf of a consenting customer. Access is gated behind developer
+    onboarding and secured with FAPI OAuth2/OIDC, PSD2 SCA, and mutual-TLS. The
+    referenced OpenAPI is the shared OBIE standard specification (v4.0.1), not a
+    Chase-proprietary contract.
+  humanURL: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  tags:
+  - Payment Initiation
+  - PISP
+  - Payments
+  properties:
+  - type: OpenAPI
+    url: openapi/obie-payment-initiation-openapi.yaml
+  - type: Documentation
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  - type: Documentation
+    url: https://www.chase.co.uk/gb/en/information-for-tpps/
+  - type: DeveloperPortal
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/
+- aid: chase-uk:chase-uk-confirmation-of-funds-api
+  name: Chase UK Confirmation of Funds API (CBPII)
+  description: >-
+    Chase UK's Confirmation of Funds (CBPII) dedicated interface, conformant to
+    the OBIE Read/Write API Standard, allowing an FCA-authorised card-based
+    payment instrument issuer to check whether a specified amount is available on
+    a consenting customer's account. Access is gated behind developer onboarding
+    and secured with FAPI OAuth2/OIDC, PSD2 SCA, and mutual-TLS. The referenced
+    OpenAPI is the shared OBIE standard specification (v4.0.1), not a
+    Chase-proprietary contract.
+  humanURL: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  tags:
+  - Confirmation of Funds
+  - CBPII
+  - Open Banking
+  properties:
+  - type: OpenAPI
+    url: openapi/obie-confirmation-funds-openapi.yaml
+  - type: Documentation
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  - type: Documentation
+    url: https://www.chase.co.uk/gb/en/information-for-tpps/
+  - type: DeveloperPortal
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/
+common:
+- type: Website
+  url: https://www.chase.co.uk/
+- type: DeveloperPortal
+  url: https://developer.openbanking-obie-sandbox.chase.co.uk/
+- type: Documentation
+  url: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+- type: GettingStarted
+  url: https://www.chase.co.uk/gb/en/information-for-tpps/
+- type: Support
+  url: https://www.chase.co.uk/gb/en/support/contact-us/
+- type: TermsOfService
+  url: https://www.chase.co.uk/gb/en/legal/general-terms-and-conditions/
+- type: PrivacyPolicy
+  url: https://www.chase.co.uk/gb/en/legal/privacy-notice/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/chase/
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

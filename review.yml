@@ -1,0 +1,119 @@
+aid: chase-uk
+name: Chase UK
+review:
+  question: >-
+    What is Chase UK's public API posture — does it run a developer portal, does
+    it expose a confirmed live Open Data endpoint, and how are its OBIE Read/Write
+    APIs secured and specified?
+  answer: >-
+    Chase UK runs a public developer portal (OBIE dedicated-interface sandbox) and
+    offers OBIE Read/Write APIs (AIS, PIS, CBPII) behind FCA-authorised onboarding.
+    No public Open Data endpoint was confirmed; the OpenAPI specs harvested are the
+    shared OBIE standard, not Chase-proprietary contracts.
+  date: '2026-07-23'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    Chase UK is J.P. Morgan Europe Limited's app-only UK digital bank (brand
+    launched September 2021), owned by JPMorgan Chase & Co., authorised and
+    regulated by the FCA and PRA. It is NOT a CMA9 mandated bank. It publishes a
+    public developer portal at
+    https://developer.openbanking-obie-sandbox.chase.co.uk/ (a React single-page
+    app, HTTP 200) plus a customer-facing "Information for TPPs" page at
+    https://www.chase.co.uk/gb/en/information-for-tpps/ (HTTP 200). As an ASPSP
+    under the UK Payment Services Regulations 2017 it exposes a dedicated Open
+    Banking interface conformant to the OBIE Read/Write API Standard, covering
+    Account Information Services (AIS), Payment Initiation Services (PIS), and
+    Card-Based Payment Instrument Issuer / Confirmation of Funds (CBPII); the
+    provider is also documented (via third-party trackers) as supporting Event
+    Notification and Dynamic Client Registration (DCR).
+
+    No public, unauthenticated OBIE Open Data API (ATMs, Branches, Personal or
+    Business Current Accounts) was confirmed for Chase UK, and this is expected:
+    the bank is app-only with no branch or ATM estate, so it is not obliged to
+    publish Open Data reference APIs. Probes of candidate Open Data paths against
+    the developer host returned the portal's SPA HTML shell (Content-Type
+    text/html) rather than JSON — i.e. NOT a live Open Data endpoint. No live
+    Open Data base URL is claimed in this profile.
+
+    The Read/Write APIs are a gated dedicated interface: access requires an
+    FCA-authorised TPP presenting a valid eIDAS QWAC or an OBWAC issued by the
+    Open Banking Certificate Authority, and is secured with FAPI-grade OAuth2 /
+    OpenID Connect, PSD2 strong customer authentication (SCA), and mutual-TLS
+    client authentication. Because Chase does not publish a bank-proprietary
+    OpenAPI download, the specifications harvested into openapi/ are the SHARED
+    OBIE Read/Write standard (v4.0.1) that the Chase interface conforms to —
+    clearly provenance-labelled below, and explicitly NOT a Chase-specific
+    contract. No confirmed production or sandbox API base URL is published beyond
+    the gated portal, so baseURL is intentionally omitted from the API entries.
+  transports:
+    - protocol: REST
+      scheme: https
+      documented: true
+      note: OBIE Read/Write dedicated interface (AIS/PIS/CBPII) over HTTPS, gated behind onboarding.
+    - protocol: OpenData
+      scheme: https
+      documented: false
+      note: No public OBIE Open Data (ATM/Branch/PCA/BCA) API; Chase UK is app-only with no branch or ATM estate.
+  authModel:
+    fapi: true
+    oauth2_oidc: true
+    mutual_tls: true
+    psd2_sca: true
+    certificates:
+      - eIDAS QWAC
+      - OBWAC (Open Banking Certificate Authority)
+    note: Dedicated interface available only to FCA-authorised/registered TPPs.
+  openDataConfirmed: false
+  openDataBaseURL: ''
+  developerPortal: https://developer.openbanking-obie-sandbox.chase.co.uk/
+  specProvenance:
+    provenance: OBIE-standard
+    proprietary: false
+    standard: OBIE Read/Write API Standard v4.0.1
+    harvestedFrom: https://raw.githubusercontent.com/OpenBankingUK/read-write-api-specs/master/dist/openapi/
+    files:
+      - openapi/obie-account-info-openapi.yaml
+      - openapi/obie-payment-initiation-openapi.yaml
+      - openapi/obie-confirmation-funds-openapi.yaml
+    note: >-
+      Shared OBIE standard specifications the Chase UK dedicated interface conforms
+      to; downloaded verbatim from OpenBankingUK/read-write-api-specs. NOT a
+      Chase-proprietary API contract.
+  endpointsProbed:
+    - url: https://developer.openbanking-obie-sandbox.chase.co.uk/
+      status: 200
+      note: Developer portal (SPA shell).
+    - url: https://www.chase.co.uk/gb/en/information-for-tpps/
+      status: 200
+      note: Customer-facing Information for TPPs page (AIS/PIS/CBPIIS, eIDAS QWAC / OBWAC).
+    - url: https://www.chase.co.uk/
+      status: 200
+      note: Chase UK homepage.
+    - url: https://developer.openbanking-obie-sandbox.chase.co.uk/open-banking/v2.3/atms
+      status: 200
+      note: Returned SPA HTML (text/html), NOT JSON — not a live Open Data endpoint.
+    - url: https://api.openbanking-obie-sandbox.chase.co.uk/open-banking/v3.1/atms
+      status: 404
+      note: No Open Data endpoint on candidate API host.
+sources:
+  - url: https://www.chase.co.uk/gb/en/information-for-tpps/
+    type: Documentation
+    note: Confirms AIS, PIS, CBPIIS dedicated interface; eIDAS QWAC / OBWAC; contact open.banking@chase.com.
+  - url: https://developer.openbanking-obie-sandbox.chase.co.uk/
+    type: DeveloperPortal
+    note: OBIE dedicated-interface sandbox developer portal.
+  - url: https://www.openbankingtracker.com/provider/jpmel
+    type: Reference
+    note: Documents Chase UK (JPMEL) supporting AISP, PISP, CBPII, Event Notification, DCR; OBIE/PSD2/OAuth2/OIDC.
+  - url: https://github.com/OpenBankingUK/read-write-api-specs
+    type: OpenAPI
+    note: Source of the shared OBIE Read/Write standard specs (v4.0.1) harvested into openapi/.
+actions:
+  openapiHarvested: true
+  openapiProvenance: OBIE-standard
+  reason: >-
+    Chase publishes no bank-proprietary OpenAPI; the shared OBIE Read/Write
+    standard specs (account-info, payment-initiation, confirmation-funds, v4.0.1)
+    were harvested verbatim and labelled as the standard the Chase interface
+    conforms to. No Open Data endpoint exists to confirm for this app-only bank.
