@@ -1,0 +1,26 @@
+generated: '2026-06-20'
+method: derived
+source: openapi/ (version + base path) + OBIE Read/Write standard lifecycle
+versioning:
+  scheme: uri-path
+  current: v4.0
+  spec_version: 4.0.1
+  detail: >-
+    Chase UK tracks the OBIE Read/Write API Standard release train. The major
+    version is pinned in the /open-banking/v4.0/{aisp|pisp|cbpii} base path;
+    OBIE publishes versioned standards and migration guidance centrally.
+deprecation:
+  policy: OBIE standard release-train deprecation (banks migrate between OBIE major versions on OBIE's published timelines)
+  sunset_header: false
+  in_spec_deprecations:
+    - OBErrorResponse1.Code (marked Deprecated in v4.0.1)
+    - OBErrorResponse1.Message (marked Deprecated in v4.0.1)
+sla:
+  detail: >-
+    Availability and performance are governed by the FCA MI reporting regime for
+    dedicated Open Banking interfaces and the bilateral TPP onboarding agreement;
+    no separate public developer SLA page is published.
+status_page:
+  found: false
+  detail: No dedicated public developer status page located for the Chase UK OBIE sandbox interface.
+deprecated_operations: []

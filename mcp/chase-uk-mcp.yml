@@ -1,0 +1,306 @@
+generated: '2026-06-20'
+method: derived
+status: candidate
+server:
+  name: chase-uk
+  transport: http
+  note: No official Chase UK MCP server published; candidate tool list derived from
+    the OBIE OpenAPI operations. Live calls require FCA-authorised TPP onboarding,
+    FAPI OAuth2, and mutual-TLS.
+tools:
+- name: create_account_access_consents
+  description: Create an Account Access Consent
+  source_operation: openapi/obie-account-info-openapi.yaml#CreateAccountAccessConsents
+  method: POST
+- name: get_account_access_consents_consent_id
+  description: Get an Account Access Consent
+  source_operation: openapi/obie-account-info-openapi.yaml#GetAccountAccessConsentsConsentId
+  method: GET
+- name: delete_account_access_consents_consent_id
+  description: Delete an Account Access Consent
+  source_operation: openapi/obie-account-info-openapi.yaml#DeleteAccountAccessConsentsConsentId
+  method: DELETE
+- name: get_accounts
+  description: Get Accounts
+  source_operation: openapi/obie-account-info-openapi.yaml#GetAccounts
+  method: GET
+- name: get_accounts_account_id
+  description: Get an Account by AccountId
+  source_operation: openapi/obie-account-info-openapi.yaml#GetAccountsAccountId
+  method: GET
+- name: get_accounts_account_id_balances
+  description: Get Balances for an AccountId
+  source_operation: openapi/obie-account-info-openapi.yaml#GetAccountsAccountIdBalances
+  method: GET
+- name: get_accounts_account_id_beneficiaries
+  description: Get Beneficiaries for an AccountId
+  source_operation: openapi/obie-account-info-openapi.yaml#GetAccountsAccountIdBeneficiaries
+  method: GET
+- name: get_accounts_account_id_direct_debits
+  description: Get Direct Debits for an AccountId
+  source_operation: openapi/obie-account-info-openapi.yaml#GetAccountsAccountIdDirectDebits
+  method: GET
+- name: get_accounts_account_id_offers
+  description: Get Offers for an AccountId
+  source_operation: openapi/obie-account-info-openapi.yaml#GetAccountsAccountIdOffers
+  method: GET
+- name: get_accounts_account_id_parties
+  description: Get Parties for an AccountId
+  source_operation: openapi/obie-account-info-openapi.yaml#GetAccountsAccountIdParties
+  method: GET
+- name: get_accounts_account_id_party
+  description: Get Party for an AccountId
+  source_operation: openapi/obie-account-info-openapi.yaml#GetAccountsAccountIdParty
+  method: GET
+- name: get_accounts_account_id_product
+  description: Get Product for an AccountId
+  source_operation: openapi/obie-account-info-openapi.yaml#GetAccountsAccountIdProduct
+  method: GET
+- name: get_accounts_account_id_scheduled_payments
+  description: Get Scheduled Payments for an AccountId
+  source_operation: openapi/obie-account-info-openapi.yaml#GetAccountsAccountIdScheduledPayments
+  method: GET
+- name: get_accounts_account_id_standing_orders
+  description: Get Standing Orders for an AccountId
+  source_operation: openapi/obie-account-info-openapi.yaml#GetAccountsAccountIdStandingOrders
+  method: GET
+- name: get_accounts_account_id_statements
+  description: Get Statements for an AccountId
+  source_operation: openapi/obie-account-info-openapi.yaml#GetAccountsAccountIdStatements
+  method: GET
+- name: get_accounts_account_id_statements_statement_id
+  description: Get Statement by StatementId for an AccountId
+  source_operation: openapi/obie-account-info-openapi.yaml#GetAccountsAccountIdStatementsStatementId
+  method: GET
+- name: get_accounts_account_id_statements_statement_id_file
+  description: Get Statement file by StatementId for an AccountId
+  source_operation: openapi/obie-account-info-openapi.yaml#GetAccountsAccountIdStatementsStatementIdFile
+  method: GET
+- name: get_accounts_account_id_statements_statement_id_transactions
+  description: Get Statement Transactions for an AccountId
+  source_operation: openapi/obie-account-info-openapi.yaml#GetAccountsAccountIdStatementsStatementIdTransactions
+  method: GET
+- name: get_accounts_account_id_transactions
+  description: Get Transactions for an AccountId
+  source_operation: openapi/obie-account-info-openapi.yaml#GetAccountsAccountIdTransactions
+  method: GET
+- name: get_balances
+  description: Get Balances
+  source_operation: openapi/obie-account-info-openapi.yaml#GetBalances
+  method: GET
+- name: get_beneficiaries
+  description: Get Beneficiaries
+  source_operation: openapi/obie-account-info-openapi.yaml#GetBeneficiaries
+  method: GET
+- name: get_direct_debits
+  description: Get Direct Debits
+  source_operation: openapi/obie-account-info-openapi.yaml#GetDirectDebits
+  method: GET
+- name: get_offers
+  description: Get Offers
+  source_operation: openapi/obie-account-info-openapi.yaml#GetOffers
+  method: GET
+- name: get_party
+  description: Get Party
+  source_operation: openapi/obie-account-info-openapi.yaml#GetParty
+  method: GET
+- name: get_products
+  description: Get Products
+  source_operation: openapi/obie-account-info-openapi.yaml#GetProducts
+  method: GET
+- name: get_scheduled_payments
+  description: Get Scheduled Payments
+  source_operation: openapi/obie-account-info-openapi.yaml#GetScheduledPayments
+  method: GET
+- name: get_standing_orders
+  description: Get Standing Orders
+  source_operation: openapi/obie-account-info-openapi.yaml#GetStandingOrders
+  method: GET
+- name: get_statements
+  description: Get Statements
+  source_operation: openapi/obie-account-info-openapi.yaml#GetStatements
+  method: GET
+- name: get_transactions
+  description: Get Transactions
+  source_operation: openapi/obie-account-info-openapi.yaml#GetTransactions
+  method: GET
+- name: create_domestic_payment_consents
+  description: Create a Domestic Payment Consent
+  source_operation: openapi/obie-payment-initiation-openapi.yaml#CreateDomesticPaymentConsents
+  method: POST
+- name: get_domestic_payment_consents_consent_id
+  description: Get a Domestic Payment Consent
+  source_operation: openapi/obie-payment-initiation-openapi.yaml#GetDomesticPaymentConsentsConsentId
+  method: GET
+- name: get_domestic_payment_consents_consent_id_funds_confirmation
+  description: Confirm availability of funds for a Domestic Payment
+  source_operation: openapi/obie-payment-initiation-openapi.yaml#GetDomesticPaymentConsentsConsentIdFundsConfirmation
+  method: GET
+- name: create_domestic_payments
+  description: Initiate a Domestic Payment
+  source_operation: openapi/obie-payment-initiation-openapi.yaml#CreateDomesticPayments
+  method: POST
+- name: get_domestic_payments_domestic_payment_id
+  description: Get a Domestic Payment
+  source_operation: openapi/obie-payment-initiation-openapi.yaml#GetDomesticPaymentsDomesticPaymentId
+  method: GET
+- name: get_domestic_payments_domestic_payment_id_payment_details
+  description: Get details of a Domestic Payment
+  source_operation: openapi/obie-payment-initiation-openapi.yaml#GetDomesticPaymentsDomesticPaymentIdPaymentDetails
+  method: GET
+- name: create_domestic_scheduled_payment_consents
+  description: Create a Domestic Scheduled Payment Consent
+  source_operation: openapi/obie-payment-initiation-openapi.yaml#CreateDomesticScheduledPaymentConsents
+  method: POST
+- name: get_domestic_scheduled_payment_consents_consent_id
+  description: Get a Domestic Scheduled Payment Consent
+  source_operation: openapi/obie-payment-initiation-openapi.yaml#GetDomesticScheduledPaymentConsentsConsentId
+  method: GET
+- name: create_domestic_scheduled_payments
+  description: Initiate a Domestic Scheduled Payment
+  source_operation: openapi/obie-payment-initiation-openapi.yaml#CreateDomesticScheduledPayments
+  method: POST
+- name: get_domestic_scheduled_payments_domestic_scheduled_payment_id
+  description: Get a Domestic Scheduled Payment
+  source_operation: openapi/obie-payment-initiation-openapi.yaml#GetDomesticScheduledPaymentsDomesticScheduledPaymentId
+  method: GET
+- name: get_domestic_scheduled_payments_domestic_scheduled_payment_id_payment_details
+  description: Get details of a Domestic Scheduled Payment
+  source_operation: openapi/obie-payment-initiation-openapi.yaml#GetDomesticScheduledPaymentsDomesticScheduledPaymentIdPaymentDetails
+  method: GET
+- name: create_domestic_standing_order_consents
+  description: Create a Domestic Standing Order Consent
+  source_operation: openapi/obie-payment-initiation-openapi.yaml#CreateDomesticStandingOrderConsents
+  method: POST
+- name: get_domestic_standing_order_consents_consent_id
+  description: Get a Domestic Standing Order Consent
+  source_operation: openapi/obie-payment-initiation-openapi.yaml#GetDomesticStandingOrderConsentsConsentId
+  method: GET
+- name: create_domestic_standing_orders
+  description: Submit a Domestic Standing Order
+  source_operation: openapi/obie-payment-initiation-openapi.yaml#CreateDomesticStandingOrders
+  method: POST
+- name: get_domestic_standing_orders_domestic_standing_order_id
+  description: Get a Domestic Standing Order
+  source_operation: openapi/obie-payment-initiation-openapi.yaml#GetDomesticStandingOrdersDomesticStandingOrderId
+  method: GET
+- name: get_domestic_standing_orders_domestic_standing_order_id_payment_details
+  description: Get details of a Domestic Standing Order Payment
+  source_operation: openapi/obie-payment-initiation-openapi.yaml#GetDomesticStandingOrdersDomesticStandingOrderIdPaymentDetails
+  method: GET
+- name: create_file_payment_consents
+  description: Create a File Payment Consent
+  source_operation: openapi/obie-payment-initiation-openapi.yaml#CreateFilePaymentConsents
+  method: POST
+- name: get_file_payment_consents_consent_id
+  description: Get a File Payment Consent
+  source_operation: openapi/obie-payment-initiation-openapi.yaml#GetFilePaymentConsentsConsentId
+  method: GET
+- name: create_file_payment_consents_consent_id_file
+  description: Upload a File for a ConsentId
+  source_operation: openapi/obie-payment-initiation-openapi.yaml#CreateFilePaymentConsentsConsentIdFile
+  method: POST
+- name: get_file_payment_consents_consent_id_file
+  description: Get a File Payment Consent's Uploaded File
+  source_operation: openapi/obie-payment-initiation-openapi.yaml#GetFilePaymentConsentsConsentIdFile
+  method: GET
+- name: create_file_payments
+  description: Submit a File Payment
+  source_operation: openapi/obie-payment-initiation-openapi.yaml#CreateFilePayments
+  method: POST
+- name: get_file_payments_file_payment_id
+  description: Get a File Payment by FilePaymentId
+  source_operation: openapi/obie-payment-initiation-openapi.yaml#GetFilePaymentsFilePaymentId
+  method: GET
+- name: get_file_payments_file_payment_id_payment_details
+  description: Get payment details for a File Payment
+  source_operation: openapi/obie-payment-initiation-openapi.yaml#GetFilePaymentsFilePaymentIdPaymentDetails
+  method: GET
+- name: get_file_payments_file_payment_id_report_file
+  description: Get a File Payment's Report File
+  source_operation: openapi/obie-payment-initiation-openapi.yaml#GetFilePaymentsFilePaymentIdReportFile
+  method: GET
+- name: create_international_payment_consents
+  description: Create an International Payment Consent
+  source_operation: openapi/obie-payment-initiation-openapi.yaml#CreateInternationalPaymentConsents
+  method: POST
+- name: get_international_payment_consents_consent_id
+  description: Get an International Payment Consent
+  source_operation: openapi/obie-payment-initiation-openapi.yaml#GetInternationalPaymentConsentsConsentId
+  method: GET
+- name: get_international_payment_consents_consent_id_funds_confirmation
+  description: Confirm Funds Availability for an International Payment
+  source_operation: openapi/obie-payment-initiation-openapi.yaml#GetInternationalPaymentConsentsConsentIdFundsConfirmation
+  method: GET
+- name: create_international_payments
+  description: Initiate an International Payment
+  source_operation: openapi/obie-payment-initiation-openapi.yaml#CreateInternationalPayments
+  method: POST
+- name: get_international_payments_international_payment_id
+  description: Get an International Payment
+  source_operation: openapi/obie-payment-initiation-openapi.yaml#GetInternationalPaymentsInternationalPaymentId
+  method: GET
+- name: get_international_payments_international_payment_id_payment_details
+  description: Get details of an International Payment
+  source_operation: openapi/obie-payment-initiation-openapi.yaml#GetInternationalPaymentsInternationalPaymentIdPaymentDetails
+  method: GET
+- name: create_international_scheduled_payment_consents
+  description: Create an International Scheduled Payment Consent
+  source_operation: openapi/obie-payment-initiation-openapi.yaml#CreateInternationalScheduledPaymentConsents
+  method: POST
+- name: get_international_scheduled_payment_consents_consent_id
+  description: Get an International Scheduled Payment Consent
+  source_operation: openapi/obie-payment-initiation-openapi.yaml#GetInternationalScheduledPaymentConsentsConsentId
+  method: GET
+- name: get_international_scheduled_payment_consents_consent_id_funds_confirmation
+  description: Confirm Funds Availability for an International Scheduled Payment
+  source_operation: openapi/obie-payment-initiation-openapi.yaml#GetInternationalScheduledPaymentConsentsConsentIdFundsConfirmation
+  method: GET
+- name: create_international_scheduled_payments
+  description: Initiate an International Scheduled Payment
+  source_operation: openapi/obie-payment-initiation-openapi.yaml#CreateInternationalScheduledPayments
+  method: POST
+- name: get_international_scheduled_payments_international_scheduled_payment_id
+  description: Get an International Scheduled Payment
+  source_operation: openapi/obie-payment-initiation-openapi.yaml#GetInternationalScheduledPaymentsInternationalScheduledPaymentId
+  method: GET
+- name: get_international_scheduled_payments_international_scheduled_payment_id_payment_details
+  description: Get details of an International Scheduled Payment
+  source_operation: openapi/obie-payment-initiation-openapi.yaml#GetInternationalScheduledPaymentsInternationalScheduledPaymentIdPaymentDetails
+  method: GET
+- name: create_international_standing_order_consents
+  description: Create an International Standing Order Consent
+  source_operation: openapi/obie-payment-initiation-openapi.yaml#CreateInternationalStandingOrderConsents
+  method: POST
+- name: get_international_standing_order_consents_consent_id
+  description: Get an International Standing Order Consent
+  source_operation: openapi/obie-payment-initiation-openapi.yaml#GetInternationalStandingOrderConsentsConsentId
+  method: GET
+- name: create_international_standing_orders
+  description: Submit an International Standing Order
+  source_operation: openapi/obie-payment-initiation-openapi.yaml#CreateInternationalStandingOrders
+  method: POST
+- name: get_international_standing_orders_international_standing_order_payment_id
+  description: Get an International Standing Order
+  source_operation: openapi/obie-payment-initiation-openapi.yaml#GetInternationalStandingOrdersInternationalStandingOrderPaymentId
+  method: GET
+- name: get_international_standing_orders_international_standing_order_payment_id_payment_details
+  description: Get details of an International Standing Order Payment
+  source_operation: openapi/obie-payment-initiation-openapi.yaml#GetInternationalStandingOrdersInternationalStandingOrderPaymentIdPaymentDetails
+  method: GET
+- name: create_funds_confirmation_consents
+  description: Create a Funds Confirmation Consent
+  source_operation: openapi/obie-confirmation-funds-openapi.yaml#CreateFundsConfirmationConsents
+  method: POST
+- name: get_funds_confirmation_consents_consent_id
+  description: Get a Funds Confirmation Consent
+  source_operation: openapi/obie-confirmation-funds-openapi.yaml#GetFundsConfirmationConsentsConsentId
+  method: GET
+- name: delete_funds_confirmation_consents_consent_id
+  description: Delete a Funds Confirmation Consent
+  source_operation: openapi/obie-confirmation-funds-openapi.yaml#DeleteFundsConfirmationConsentsConsentId
+  method: DELETE
+- name: create_funds_confirmations
+  description: Create a Funds Confirmation Request
+  source_operation: openapi/obie-confirmation-funds-openapi.yaml#CreateFundsConfirmations
+  method: POST

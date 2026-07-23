@@ -1,0 +1,17 @@
+# generated: '2026-06-20'
+# method: generated
+# source: openapi/obie-confirmation-funds-openapi.yaml
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Chase UK Confirmation of Funds API Specification
+  version: 1.0.0
+extends: openapi/obie-confirmation-funds-openapi.yaml
+actions:
+- target: $.info
+  update:
+    x-apievangelist-provider: Chase UK (J.P. Morgan Europe Limited)
+    x-apievangelist-standard: UK Open Banking (OBIE) Read/Write API v4.0.1
+    x-apievangelist-access: FCA-authorised TPP onboarding + FAPI OAuth2/OIDC + mutual-TLS
+      (eIDAS QWAC/OBWAC)
+    x-apievangelist-note: Shared OBIE standard specification, not a Chase-proprietary
+      contract.

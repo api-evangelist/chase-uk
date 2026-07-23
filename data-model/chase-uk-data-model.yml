@@ -1,0 +1,111 @@
+generated: '2026-06-20'
+method: derived
+source: openapi/ (OBIE v4.0.1 resource graph)
+note: Derived from the OBIE Read/Write v4.0.1 resource graph (path structure + {AccountId}/{ConsentId}/{StatementId}
+  id-reference segments). OBIE object IDs are opaque strings (no cross-provider prefixes).
+entities:
+- AccountAccessConsent
+- Account
+- Balance
+- Transaction
+- Beneficiary
+- DirectDebit
+- StandingOrder
+- ScheduledPayment
+- Statement
+- Party
+- Product
+- Offer
+- DomesticPaymentConsent
+- DomesticPayment
+- DomesticScheduledPaymentConsent
+- DomesticScheduledPayment
+- DomesticStandingOrderConsent
+- DomesticStandingOrder
+- FilePaymentConsent
+- FilePayment
+- InternationalPaymentConsent
+- InternationalPayment
+- InternationalScheduledPaymentConsent
+- InternationalScheduledPayment
+- InternationalStandingOrderConsent
+- InternationalStandingOrder
+- FundsConfirmationConsent
+- FundsConfirmation
+relationships:
+- from: Account
+  to: Balance
+  type: has_many
+  via: AccountId
+- from: Account
+  to: Transaction
+  type: has_many
+  via: AccountId
+- from: Account
+  to: Beneficiary
+  type: has_many
+  via: AccountId
+- from: Account
+  to: DirectDebit
+  type: has_many
+  via: AccountId
+- from: Account
+  to: StandingOrder
+  type: has_many
+  via: AccountId
+- from: Account
+  to: ScheduledPayment
+  type: has_many
+  via: AccountId
+- from: Account
+  to: Statement
+  type: has_many
+  via: AccountId
+- from: Account
+  to: Party
+  type: has_many
+  via: AccountId
+- from: Account
+  to: Product
+  type: has_one
+  via: AccountId
+- from: Statement
+  to: Transaction
+  type: has_many
+  via: StatementId
+- from: AccountAccessConsent
+  to: Account
+  type: grants_access_to
+  via: ConsentId
+- from: DomesticPaymentConsent
+  to: DomesticPayment
+  type: authorises
+  via: ConsentId
+- from: DomesticScheduledPaymentConsent
+  to: DomesticScheduledPayment
+  type: authorises
+  via: ConsentId
+- from: DomesticStandingOrderConsent
+  to: DomesticStandingOrder
+  type: authorises
+  via: ConsentId
+- from: FilePaymentConsent
+  to: FilePayment
+  type: authorises
+  via: ConsentId
+- from: InternationalPaymentConsent
+  to: InternationalPayment
+  type: authorises
+  via: ConsentId
+- from: InternationalScheduledPaymentConsent
+  to: InternationalScheduledPayment
+  type: authorises
+  via: ConsentId
+- from: InternationalStandingOrderConsent
+  to: InternationalStandingOrder
+  type: authorises
+  via: ConsentId
+- from: FundsConfirmationConsent
+  to: FundsConfirmation
+  type: authorises
+  via: ConsentId

@@ -1,0 +1,59 @@
+generated: '2026-06-20'
+method: derived
+source: openapi/ (OBIE Read/Write v4.0.1 responses + OBErrorResponse1 schema)
+format: obie-error
+note: >-
+  Chase UK's dedicated interface follows the OBIE Read/Write error model, NOT
+  RFC 9457 problem+json. Error responses carry an OBErrorResponse1 envelope with
+  a top-level Id (audit reference), an optional high-level Code/Message (both
+  marked Deprecated in v4.0.1), and an Errors[] array of OBError1 objects, each
+  with an ErrorCode (from the OBIE OBExternalStatusReason1Code enumeration), a
+  free-text Message, an optional JSON Path to the offending field, and an
+  optional remediation Url. Content type is application/json.
+envelope:
+  schema: OBErrorResponse1
+  fields:
+    - Id            # unique audit reference for the error instance
+    - Code          # deprecated high-level category
+    - Message       # deprecated brief message
+    - Errors[]      # array of OBError1 { ErrorCode, Message, Path, Url }
+problems:
+  - status: 400
+    title: Bad request
+    description: Malformed request, schema violation, or invalid field values (see Errors[].Path).
+  - status: 401
+    title: Unauthorized
+    description: Missing, invalid, or expired FAPI OAuth2 access token / consent.
+  - status: 403
+    title: Forbidden
+    description: Token valid but lacks the required scope or consent for the resource.
+  - status: 404
+    title: Not found
+    description: Referenced resource (AccountId, ConsentId, PaymentId, StatementId) does not exist.
+  - status: 405
+    title: Method not allowed
+    description: HTTP method not supported for the resource.
+  - status: 406
+    title: Not acceptable
+    description: Requested representation (Accept header) cannot be produced.
+  - status: 409
+    title: Conflict
+    description: >-
+      Idempotency conflict or resource state conflict — a replay of a different
+      request body under an already-seen x-idempotency-key, or consent/payment
+      state that forbids the transition.
+  - status: 415
+    title: Unsupported media type
+    description: Request Content-Type is not application/json.
+  - status: 422
+    title: Unprocessable entity
+    description: >-
+      Business-rule rejection surfaced as OBError1 ErrorCodes (e.g.
+      UK.OBIE.Rules.* / UK.OBIE.Field.* / UK.OBIE.Resource.* /
+      UK.OBIE.Unsupported.*).
+  - status: 429
+    title: Too many requests
+    description: Rate limit exceeded; retry after the indicated interval.
+  - status: 500
+    title: Internal server error
+    description: Unexpected ASPSP-side failure; the Id field carries an audit reference.

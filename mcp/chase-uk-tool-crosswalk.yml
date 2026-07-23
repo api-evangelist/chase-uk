@@ -1,0 +1,616 @@
+generated: '2026-06-20'
+method: derived
+source: openapi/ (candidate MCP tools bound 1:1 to OBIE operations)
+surfaces:
+  openapi:
+  - openapi/obie-account-info-openapi.yaml
+  - openapi/obie-payment-initiation-openapi.yaml
+  - openapi/obie-confirmation-funds-openapi.yaml
+  graphql: null
+  mcp:
+    url: null
+    status: candidate
+    gated: true
+    note: No hosted MCP server; tools derived from OpenAPI. Live invocation is auth-gated
+      (FAPI OAuth2 + mTLS + FCA onboarding).
+crosswalk:
+- tool: create_account_access_consents
+  category: consent
+  rest:
+  - CreateAccountAccessConsents
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_account_access_consents_consent_id
+  category: consent
+  rest:
+  - GetAccountAccessConsentsConsentId
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: delete_account_access_consents_consent_id
+  category: consent
+  rest:
+  - DeleteAccountAccessConsentsConsentId
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_accounts
+  category: read
+  rest:
+  - GetAccounts
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_accounts_account_id
+  category: read
+  rest:
+  - GetAccountsAccountId
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_accounts_account_id_balances
+  category: read
+  rest:
+  - GetAccountsAccountIdBalances
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_accounts_account_id_beneficiaries
+  category: read
+  rest:
+  - GetAccountsAccountIdBeneficiaries
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_accounts_account_id_direct_debits
+  category: read
+  rest:
+  - GetAccountsAccountIdDirectDebits
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_accounts_account_id_offers
+  category: read
+  rest:
+  - GetAccountsAccountIdOffers
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_accounts_account_id_parties
+  category: read
+  rest:
+  - GetAccountsAccountIdParties
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_accounts_account_id_party
+  category: read
+  rest:
+  - GetAccountsAccountIdParty
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_accounts_account_id_product
+  category: read
+  rest:
+  - GetAccountsAccountIdProduct
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_accounts_account_id_scheduled_payments
+  category: read
+  rest:
+  - GetAccountsAccountIdScheduledPayments
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_accounts_account_id_standing_orders
+  category: read
+  rest:
+  - GetAccountsAccountIdStandingOrders
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_accounts_account_id_statements
+  category: read
+  rest:
+  - GetAccountsAccountIdStatements
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_accounts_account_id_statements_statement_id
+  category: read
+  rest:
+  - GetAccountsAccountIdStatementsStatementId
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_accounts_account_id_statements_statement_id_file
+  category: read
+  rest:
+  - GetAccountsAccountIdStatementsStatementIdFile
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_accounts_account_id_statements_statement_id_transactions
+  category: read
+  rest:
+  - GetAccountsAccountIdStatementsStatementIdTransactions
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_accounts_account_id_transactions
+  category: read
+  rest:
+  - GetAccountsAccountIdTransactions
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_balances
+  category: read
+  rest:
+  - GetBalances
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_beneficiaries
+  category: read
+  rest:
+  - GetBeneficiaries
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_direct_debits
+  category: read
+  rest:
+  - GetDirectDebits
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_offers
+  category: read
+  rest:
+  - GetOffers
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_party
+  category: read
+  rest:
+  - GetParty
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_products
+  category: read
+  rest:
+  - GetProducts
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_scheduled_payments
+  category: read
+  rest:
+  - GetScheduledPayments
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_standing_orders
+  category: read
+  rest:
+  - GetStandingOrders
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_statements
+  category: read
+  rest:
+  - GetStatements
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_transactions
+  category: read
+  rest:
+  - GetTransactions
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: create_domestic_payment_consents
+  category: consent
+  rest:
+  - CreateDomesticPaymentConsents
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_domestic_payment_consents_consent_id
+  category: consent
+  rest:
+  - GetDomesticPaymentConsentsConsentId
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_domestic_payment_consents_consent_id_funds_confirmation
+  category: consent
+  rest:
+  - GetDomesticPaymentConsentsConsentIdFundsConfirmation
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: create_domestic_payments
+  category: write
+  rest:
+  - CreateDomesticPayments
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_domestic_payments_domestic_payment_id
+  category: read
+  rest:
+  - GetDomesticPaymentsDomesticPaymentId
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_domestic_payments_domestic_payment_id_payment_details
+  category: read
+  rest:
+  - GetDomesticPaymentsDomesticPaymentIdPaymentDetails
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: create_domestic_scheduled_payment_consents
+  category: consent
+  rest:
+  - CreateDomesticScheduledPaymentConsents
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_domestic_scheduled_payment_consents_consent_id
+  category: consent
+  rest:
+  - GetDomesticScheduledPaymentConsentsConsentId
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: create_domestic_scheduled_payments
+  category: write
+  rest:
+  - CreateDomesticScheduledPayments
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_domestic_scheduled_payments_domestic_scheduled_payment_id
+  category: read
+  rest:
+  - GetDomesticScheduledPaymentsDomesticScheduledPaymentId
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_domestic_scheduled_payments_domestic_scheduled_payment_id_payment_details
+  category: read
+  rest:
+  - GetDomesticScheduledPaymentsDomesticScheduledPaymentIdPaymentDetails
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: create_domestic_standing_order_consents
+  category: consent
+  rest:
+  - CreateDomesticStandingOrderConsents
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_domestic_standing_order_consents_consent_id
+  category: consent
+  rest:
+  - GetDomesticStandingOrderConsentsConsentId
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: create_domestic_standing_orders
+  category: write
+  rest:
+  - CreateDomesticStandingOrders
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_domestic_standing_orders_domestic_standing_order_id
+  category: read
+  rest:
+  - GetDomesticStandingOrdersDomesticStandingOrderId
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_domestic_standing_orders_domestic_standing_order_id_payment_details
+  category: read
+  rest:
+  - GetDomesticStandingOrdersDomesticStandingOrderIdPaymentDetails
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: create_file_payment_consents
+  category: consent
+  rest:
+  - CreateFilePaymentConsents
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_file_payment_consents_consent_id
+  category: consent
+  rest:
+  - GetFilePaymentConsentsConsentId
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: create_file_payment_consents_consent_id_file
+  category: consent
+  rest:
+  - CreateFilePaymentConsentsConsentIdFile
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_file_payment_consents_consent_id_file
+  category: consent
+  rest:
+  - GetFilePaymentConsentsConsentIdFile
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: create_file_payments
+  category: write
+  rest:
+  - CreateFilePayments
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_file_payments_file_payment_id
+  category: read
+  rest:
+  - GetFilePaymentsFilePaymentId
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_file_payments_file_payment_id_payment_details
+  category: read
+  rest:
+  - GetFilePaymentsFilePaymentIdPaymentDetails
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_file_payments_file_payment_id_report_file
+  category: read
+  rest:
+  - GetFilePaymentsFilePaymentIdReportFile
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: create_international_payment_consents
+  category: consent
+  rest:
+  - CreateInternationalPaymentConsents
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_international_payment_consents_consent_id
+  category: consent
+  rest:
+  - GetInternationalPaymentConsentsConsentId
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_international_payment_consents_consent_id_funds_confirmation
+  category: consent
+  rest:
+  - GetInternationalPaymentConsentsConsentIdFundsConfirmation
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: create_international_payments
+  category: write
+  rest:
+  - CreateInternationalPayments
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_international_payments_international_payment_id
+  category: read
+  rest:
+  - GetInternationalPaymentsInternationalPaymentId
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_international_payments_international_payment_id_payment_details
+  category: read
+  rest:
+  - GetInternationalPaymentsInternationalPaymentIdPaymentDetails
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: create_international_scheduled_payment_consents
+  category: consent
+  rest:
+  - CreateInternationalScheduledPaymentConsents
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_international_scheduled_payment_consents_consent_id
+  category: consent
+  rest:
+  - GetInternationalScheduledPaymentConsentsConsentId
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_international_scheduled_payment_consents_consent_id_funds_confirmation
+  category: consent
+  rest:
+  - GetInternationalScheduledPaymentConsentsConsentIdFundsConfirmation
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: create_international_scheduled_payments
+  category: write
+  rest:
+  - CreateInternationalScheduledPayments
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_international_scheduled_payments_international_scheduled_payment_id
+  category: read
+  rest:
+  - GetInternationalScheduledPaymentsInternationalScheduledPaymentId
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_international_scheduled_payments_international_scheduled_payment_id_payment_details
+  category: read
+  rest:
+  - GetInternationalScheduledPaymentsInternationalScheduledPaymentIdPaymentDetails
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: create_international_standing_order_consents
+  category: consent
+  rest:
+  - CreateInternationalStandingOrderConsents
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_international_standing_order_consents_consent_id
+  category: consent
+  rest:
+  - GetInternationalStandingOrderConsentsConsentId
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: create_international_standing_orders
+  category: write
+  rest:
+  - CreateInternationalStandingOrders
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_international_standing_orders_international_standing_order_payment_id
+  category: read
+  rest:
+  - GetInternationalStandingOrdersInternationalStandingOrderPaymentId
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_international_standing_orders_international_standing_order_payment_id_payment_details
+  category: read
+  rest:
+  - GetInternationalStandingOrdersInternationalStandingOrderPaymentIdPaymentDetails
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: create_funds_confirmation_consents
+  category: consent
+  rest:
+  - CreateFundsConfirmationConsents
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: get_funds_confirmation_consents_consent_id
+  category: consent
+  rest:
+  - GetFundsConfirmationConsentsConsentId
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: delete_funds_confirmation_consents_consent_id
+  category: consent
+  rest:
+  - DeleteFundsConfirmationConsentsConsentId
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+- tool: create_funds_confirmations
+  category: write
+  rest:
+  - CreateFundsConfirmations
+  binding: rest
+  confidence: high
+  note: 1:1 candidate binding to the OBIE operation; the tool inherits that operation's
+    parameters + requestBody as its input schema.
+mcp_only: []
+rest_only: []
+coverage:
+  tools_named: 74
+  tools_bound: 74
+  mcp_only: 0
+  rest_ops_total: 74
+  rest_ops_with_tool: 74

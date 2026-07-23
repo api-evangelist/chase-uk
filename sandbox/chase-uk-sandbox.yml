@@ -1,0 +1,23 @@
+generated: '2026-06-20'
+method: searched
+source: https://developer.openbanking-obie-sandbox.chase.co.uk/
+note: >-
+  Chase UK exposes its OBIE Read/Write interface through a dedicated developer
+  sandbox at developer.openbanking-obie-sandbox.chase.co.uk. The sandbox is the
+  only public entry point to the API surface; live access mirrors it after
+  FCA-authorised TPP onboarding.
+sandbox:
+  portal: https://developer.openbanking-obie-sandbox.chase.co.uk/
+  docs: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  environment: sandbox
+  access_model: >-
+    Access is gated behind developer registration and FCA-authorised TPP
+    onboarding. Even the sandbox requires FAPI OAuth2 client credentials and
+    mutual-TLS certificates (test eIDAS QWAC/OBWAC or OB test certs).
+  test_values:
+    published: false
+    detail: >-
+      Test PSU credentials, test accounts, and test payment data are provisioned
+      per registered TPP inside the onboarded sandbox and are not published
+      openly. No verbatim test values are recorded here (none are public).
+  tpp_contact: open.banking@chase.com

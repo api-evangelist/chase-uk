@@ -1,0 +1,31 @@
+generated: '2026-06-20'
+method: derived
+source: openapi/ (securitySchemes, headers, error schema) + OBIE standard + FCA/PRA regulatory posture
+standards:
+  - id: oauth2
+    conforms: true
+    evidence: openapi securitySchemes TPPOAuth2Security + PSUOAuth2Security type oauth2 (clientCredentials + authorizationCode flows)
+  - id: openid-connect
+    conforms: true
+    evidence: OBIE Read/Write uses OIDC hybrid/authorization-code for PSU authorisation with SCA
+  - id: fapi-1.0-advanced
+    conforms: true
+    evidence: FAPI-grade security profile (x-jws-signature, x-fapi-interaction-id, mTLS, request signing) mandated by the OBIE Read/Write standard
+  - id: psd2-sca
+    conforms: true
+    evidence: PSD2 / UK Payment Services Regulations 2017 strong customer authentication in the PSU authorisation flow
+  - id: mutual-tls
+    conforms: true
+    evidence: Transport secured with eIDAS QWAC / OBWAC certificates from the Open Banking Certificate Authority
+  - id: obie-read-write-v4
+    conforms: true
+    evidence: OpenAPI titles/versions declare OBIE Account & Transaction, Payment Initiation, and Confirmation of Funds v4.0.1
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: errors use the OBIE OBErrorResponse1 envelope (application/json), not application/problem+json
+  - id: fca-pra-authorised
+    conforms: true
+    evidence: >-
+      J.P. Morgan Europe Limited (Chase UK) is authorised and regulated in the UK
+      by the Financial Conduct Authority and the Prudential Regulation Authority;
+      an ASPSP under the Payment Services Regulations 2017.

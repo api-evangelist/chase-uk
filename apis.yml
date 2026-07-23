@@ -107,6 +107,14 @@ apis:
   - type: DeveloperPortal
     url: https://developer.openbanking-obie-sandbox.chase.co.uk/
 common:
+- type: DomainSecurity
+  url: security/chase-uk-domain-security.yml
+- type: AgenticAccess
+  url: agentic-access/chase-uk-agentic-access.yml
+- type: OAuthScopes
+  url: scopes/chase-uk-scopes.yml
+- type: Authentication
+  url: authentication/chase-uk-authentication.yml
 - type: Website
   url: https://www.chase.co.uk/
 - type: DeveloperPortal
@@ -123,6 +131,39 @@ common:
   url: https://www.chase.co.uk/gb/en/legal/privacy-notice/
 - type: LinkedIn
   url: https://www.linkedin.com/company/chase/
+- type: Conventions
+  url: conventions/chase-uk-conventions.yml
+- type: Idempotency
+  url: conventions/chase-uk-conventions.yml
+- type: ErrorCatalog
+  url: errors/chase-uk-problem-types.yml
+- type: Conformance
+  url: conformance/chase-uk-conformance.yml
+- type: Compliance
+  url: https://www.chase.co.uk/gb/en/information-for-tpps/
+- type: Lifecycle
+  url: lifecycle/chase-uk-lifecycle.yml
+- type: DataModel
+  url: data-model/chase-uk-data-model.yml
+- type: Sandbox
+  url: sandbox/chase-uk-sandbox.yml
+- type: LLMsTxt
+  url: llms/chase-uk-llms.txt
+- type: AgentSkill
+  url: skills/_index.yml
+- type: MCPServer
+  url: mcp/chase-uk-mcp.yml
+- type: ToolCrosswalk
+  url: mcp/chase-uk-tool-crosswalk.yml
+- type: Overlay
+  name: AIS OpenAPI overlay
+  url: overlays/chase-uk-account-info-overlay.yaml
+- type: Overlay
+  name: PIS OpenAPI overlay
+  url: overlays/chase-uk-payment-initiation-overlay.yaml
+- type: Overlay
+  name: CBPII OpenAPI overlay
+  url: overlays/chase-uk-confirmation-funds-overlay.yaml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com

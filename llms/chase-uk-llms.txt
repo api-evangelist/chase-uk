@@ -1,0 +1,31 @@
+# Chase UK
+
+> Chase UK is the app-only digital retail bank operated in the United Kingdom by J.P. Morgan Europe Limited (a subsidiary of JPMorgan Chase & Co.), authorised and regulated by the FCA and PRA. As a PSD2/UK account provider (ASPSP) it operates a dedicated UK Open Banking (OBIE) Read/Write interface exposing Account Information (AIS), Payment Initiation (PIS), and Confirmation of Funds (CBPII) to FCA-authorised third-party providers, secured with FAPI OAuth2/OIDC, PSD2 SCA, and mutual-TLS. Access is via the sandbox developer portal after onboarding; Chase UK is not a CMA9 bank and publishes no Open Data APIs (app-only, no branch/ATM estate).
+
+## APIs
+
+- [Account and Transaction Information API (AIS)](https://developer.openbanking-obie-sandbox.chase.co.uk/docs/): OBIE AIS v4.0.1 — accounts, balances, transactions, beneficiaries, standing orders, direct debits, statements, parties, products.
+- [Payment Initiation API (PIS)](https://developer.openbanking-obie-sandbox.chase.co.uk/docs/): OBIE PIS v4.0.1 — domestic, scheduled, standing-order, file, and international payments with consent + funds-confirmation.
+- [Confirmation of Funds API (CBPII)](https://developer.openbanking-obie-sandbox.chase.co.uk/docs/): OBIE CBPII v4.0.1 — funds-confirmation consents and checks.
+
+## Specs
+
+- [AIS OpenAPI](https://raw.githubusercontent.com/api-evangelist/chase-uk/refs/heads/main/openapi/obie-account-info-openapi.yaml): OBIE Account & Transaction v4.0.1 (29 operations).
+- [PIS OpenAPI](https://raw.githubusercontent.com/api-evangelist/chase-uk/refs/heads/main/openapi/obie-payment-initiation-openapi.yaml): OBIE Payment Initiation v4.0.1 (41 operations).
+- [CBPII OpenAPI](https://raw.githubusercontent.com/api-evangelist/chase-uk/refs/heads/main/openapi/obie-confirmation-funds-openapi.yaml): OBIE Confirmation of Funds v4.0.1 (4 operations).
+
+## Artifacts
+
+- [Authentication profile](https://raw.githubusercontent.com/api-evangelist/chase-uk/refs/heads/main/authentication/chase-uk-authentication.yml): FAPI OAuth2/OIDC security schemes.
+- [OAuth scopes](https://raw.githubusercontent.com/api-evangelist/chase-uk/refs/heads/main/scopes/chase-uk-scopes.yml): accounts, payments, fundsconfirmations.
+- [API conventions](https://raw.githubusercontent.com/api-evangelist/chase-uk/refs/heads/main/conventions/chase-uk-conventions.yml): idempotency (x-idempotency-key, 24h), JWS signing, FAPI tracing, link pagination.
+- [Error model](https://raw.githubusercontent.com/api-evangelist/chase-uk/refs/heads/main/errors/chase-uk-problem-types.yml): OBIE OBErrorResponse1 envelope.
+- [Conformance](https://raw.githubusercontent.com/api-evangelist/chase-uk/refs/heads/main/conformance/chase-uk-conformance.yml): OAuth2, OIDC, FAPI 1.0 Advanced, PSD2 SCA, mTLS, OBIE v4.
+- [Data model](https://raw.githubusercontent.com/api-evangelist/chase-uk/refs/heads/main/data-model/chase-uk-data-model.yml): OBIE resource graph.
+- [MCP tool crosswalk](https://raw.githubusercontent.com/api-evangelist/chase-uk/refs/heads/main/mcp/chase-uk-tool-crosswalk.yml): candidate agent tools bound to OBIE operations.
+
+## Docs
+
+- [Developer portal (sandbox)](https://developer.openbanking-obie-sandbox.chase.co.uk/)
+- [Information for TPPs](https://www.chase.co.uk/gb/en/information-for-tpps/)
+- [Website](https://www.chase.co.uk/)

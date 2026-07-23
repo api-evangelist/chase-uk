@@ -1,0 +1,16 @@
+generated: '2026-06-20'
+method: generated
+source: openapi/ (operationIds grounded in OBIE Read/Write v4.0.1 specs)
+skills:
+  - file: chase-uk-account-access.md
+    name: Read a customer's accounts, balances and transactions (AIS)
+    api: openapi/obie-account-info-openapi.yaml
+    operations: [CreateAccountAccessConsents, GetAccountAccessConsentsConsentId, GetAccounts, GetAccountsAccountIdBalances, GetAccountsAccountIdTransactions]
+  - file: chase-uk-domestic-payment.md
+    name: Initiate a domestic payment (PIS)
+    api: openapi/obie-payment-initiation-openapi.yaml
+    operations: [CreateDomesticPaymentConsents, GetDomesticPaymentConsentsConsentId, GetDomesticPaymentConsentsConsentIdFundsConfirmation, CreateDomesticPayments, GetDomesticPaymentsDomesticPaymentId]
+  - file: chase-uk-confirmation-of-funds.md
+    name: Confirm funds availability (CBPII)
+    api: openapi/obie-confirmation-funds-openapi.yaml
+    operations: [CreateFundsConfirmationConsents, GetFundsConfirmationConsentsConsentId, CreateFundsConfirmations]

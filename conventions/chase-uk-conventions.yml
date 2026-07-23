@@ -1,0 +1,58 @@
+generated: '2026-06-20'
+method: derived
+source: openapi/ (OBIE Read/Write v4.0.1 headers, parameters, schemas) + OBIE standard
+note: >-
+  Cross-cutting request/response semantics for Chase UK's OBIE Read/Write
+  dedicated interface. All three services (AIS, PIS, CBPII) share the OBIE
+  header and envelope conventions. Cross-links: authentication/chase-uk-authentication.yml,
+  scopes/chase-uk-scopes.yml, errors/chase-uk-problem-types.yml, lifecycle/chase-uk-lifecycle.yml.
+authentication:
+  style: FAPI OAuth2 / OpenID Connect + mutual-TLS
+  detail: >-
+    FAPI 1.0 Advanced. TPPs authenticate with client credentials (via
+    private_key_jwt or mTLS client auth); the PSU authorises via the
+    authorization-code flow with PSD2 strong customer authentication. Transport
+    is secured with eIDAS QWAC / OBWAC certificates. See authentication/ + scopes/.
+idempotency:
+  supported: true
+  header: x-idempotency-key
+  required_on: write operations (all Create* payment / consent POSTs)
+  retention: 24 hours
+  max_length: 40
+  semantics: >-
+    Every request is processed only once per x-idempotency-key within the
+    24-hour window. Replaying the same key with an identical body returns the
+    original result; replaying with a different body is rejected (HTTP 409).
+message_signing:
+  header: x-jws-signature
+  detail: >-
+    Detached JWS signature over the request/response body for non-repudiation on
+    payment and file-payment operations, per the OBIE message-signing profile.
+request_tracing:
+  header: x-fapi-interaction-id
+  detail: >-
+    RFC-style correlation id echoed by the ASPSP for end-to-end tracing.
+    Complemented by x-fapi-auth-date, x-fapi-customer-ip-address, and
+    x-customer-user-agent request headers.
+pagination:
+  style: link-based
+  response_fields: [Links.Self, Links.First, Links.Prev, Links.Next, Links.Last, Meta.TotalPages]
+  detail: >-
+    Collection responses carry a Links object (Self/First/Prev/Next/Last) and a
+    Meta object (TotalPages, optionally FirstAvailableDateTime /
+    LastAvailableDateTime for transactions). Transaction and statement queries
+    support fromBookingDateTime / toBookingDateTime and fromStatementDateTime /
+    toStatementDateTime filters.
+versioning:
+  style: uri-path
+  current: v4.0
+  detail: OBIE Read/Write v4.0.1; version pinned in the /open-banking/v4.0/{role} base path.
+error_envelope:
+  schema: OBErrorResponse1
+  detail: See errors/chase-uk-problem-types.yml (OBIE error model, not RFC 9457).
+rate_limiting:
+  signal: HTTP 429
+  detail: >-
+    Excess requests are rejected with 429. OBIE does not standardise a
+    rate-limit header set; specific ceilings are governed by the bilateral TPP
+    onboarding agreement.
