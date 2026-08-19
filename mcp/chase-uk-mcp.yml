@@ -4,9 +4,8 @@ status: candidate
 server:
   name: chase-uk
   transport: http
-  note: No official Chase UK MCP server published; candidate tool list derived from
-    the OBIE OpenAPI operations. Live calls require FCA-authorised TPP onboarding,
-    FAPI OAuth2, and mutual-TLS.
+  note: No official Chase UK MCP server published; candidate tool list derived from the OBIE OpenAPI operations.
+    Live calls require FCA-authorised TPP onboarding, FAPI OAuth2, and mutual-TLS.
 tools:
 - name: create_account_access_consents
   description: Create an Account Access Consent
@@ -304,3 +303,9 @@ tools:
   description: Create a Funds Confirmation Request
   source_operation: openapi/obie-confirmation-funds-openapi.yaml#CreateFundsConfirmations
   method: POST
+deployment:
+  mode: none
+  verified: derived
+  tools: 74
+  checked: '2026-08-12'
+  source: catalog MCP census
