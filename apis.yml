@@ -45,72 +45,438 @@ created: '2026-07-23'
 modified: '2026-07-23'
 specificationVersion: '0.23'
 apis:
-- aid: chase-uk:chase-uk-account-information-api
-  name: Chase UK Account and Transaction Information API (AIS)
+- aid: chase-uk:chase-uk-account-access-consents-api
+  name: Chase UK Account Access Consents API
   description: >-
-    Chase UK's Account Information Service (AIS) dedicated interface, conformant
-    to the OBIE Read/Write API Standard, letting FCA-authorised AISPs retrieve a
-    consenting customer's account, balance, transaction, beneficiary, standing
-    order, direct debit, and statement data. Access is gated behind developer
-    onboarding and secured with FAPI OAuth2/OIDC, PSD2 SCA, and mutual-TLS. The
-    referenced OpenAPI is the shared OBIE standard specification (v4.0.1), not a
-    Chase-proprietary contract.
+    The Account Access Consents API from Chase UK — 2 operation(s) for account access consents.
   humanURL: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
   tags:
-  - Account Information
-  - AISP
-  - Open Banking
+  - Account Access Consents
   properties:
   - type: OpenAPI
-    url: openapi/obie-account-info-openapi.yaml
+    url: openapi/chase-uk-account-access-consents-api-openapi.yml
   - type: Documentation
     url: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
   - type: Documentation
     url: https://www.chase.co.uk/gb/en/information-for-tpps/
   - type: DeveloperPortal
     url: https://developer.openbanking-obie-sandbox.chase.co.uk/
-- aid: chase-uk:chase-uk-payment-initiation-api
-  name: Chase UK Payment Initiation API (PIS)
-  description: >-
-    Chase UK's Payment Initiation Service (PIS) dedicated interface, conformant
-    to the OBIE Read/Write API Standard, enabling FCA-authorised PISPs to create
-    single immediate payments, future-dated payments, and standing orders to UK
-    accounts on behalf of a consenting customer. Access is gated behind developer
-    onboarding and secured with FAPI OAuth2/OIDC, PSD2 SCA, and mutual-TLS. The
-    referenced OpenAPI is the shared OBIE standard specification (v4.0.1), not a
-    Chase-proprietary contract.
+- aid: chase-uk:chase-uk-accounts-api
+  name: Chase UK Accounts API
+  description: The Accounts API from Chase UK — 2 operation(s) for accounts.
   humanURL: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
   tags:
-  - Payment Initiation
-  - PISP
-  - Payments
+  - Accounts
   properties:
   - type: OpenAPI
-    url: openapi/obie-payment-initiation-openapi.yaml
+    url: openapi/chase-uk-accounts-api-openapi.yml
   - type: Documentation
     url: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
   - type: Documentation
     url: https://www.chase.co.uk/gb/en/information-for-tpps/
   - type: DeveloperPortal
     url: https://developer.openbanking-obie-sandbox.chase.co.uk/
-- aid: chase-uk:chase-uk-confirmation-of-funds-api
-  name: Chase UK Confirmation of Funds API (CBPII)
-  description: >-
-    Chase UK's Confirmation of Funds (CBPII) dedicated interface, conformant to
-    the OBIE Read/Write API Standard, allowing an FCA-authorised card-based
-    payment instrument issuer to check whether a specified amount is available on
-    a consenting customer's account. Access is gated behind developer onboarding
-    and secured with FAPI OAuth2/OIDC, PSD2 SCA, and mutual-TLS. The referenced
-    OpenAPI is the shared OBIE standard specification (v4.0.1), not a
-    Chase-proprietary contract.
+- aid: chase-uk:chase-uk-balances-api
+  name: Chase UK Balances API
+  description: The Balances API from Chase UK — 2 operation(s) for balances.
   humanURL: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
   tags:
-  - Confirmation of Funds
-  - CBPII
-  - Open Banking
+  - Balances
   properties:
   - type: OpenAPI
-    url: openapi/obie-confirmation-funds-openapi.yaml
+    url: openapi/chase-uk-balances-api-openapi.yml
+  - type: Documentation
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  - type: Documentation
+    url: https://www.chase.co.uk/gb/en/information-for-tpps/
+  - type: DeveloperPortal
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/
+- aid: chase-uk:chase-uk-beneficiaries-api
+  name: Chase UK Beneficiaries API
+  description: The Beneficiaries API from Chase UK — 2 operation(s) for beneficiaries.
+  humanURL: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  tags:
+  - Beneficiaries
+  properties:
+  - type: OpenAPI
+    url: openapi/chase-uk-beneficiaries-api-openapi.yml
+  - type: Documentation
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  - type: Documentation
+    url: https://www.chase.co.uk/gb/en/information-for-tpps/
+  - type: DeveloperPortal
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/
+- aid: chase-uk:chase-uk-direct-debits-api
+  name: Chase UK Direct Debits API
+  description: The Direct Debits API from Chase UK — 2 operation(s) for direct debits.
+  humanURL: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  tags:
+  - Direct Debits
+  properties:
+  - type: OpenAPI
+    url: openapi/chase-uk-direct-debits-api-openapi.yml
+  - type: Documentation
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  - type: Documentation
+    url: https://www.chase.co.uk/gb/en/information-for-tpps/
+  - type: DeveloperPortal
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/
+- aid: chase-uk:chase-uk-domestic-payment-consents-api
+  name: Chase UK Domestic Payment Consents API
+  description: >-
+    The Domestic Payment Consents API from Chase UK — 3 operation(s) for domestic payment consents.
+  humanURL: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  tags:
+  - Domestic Payment Consents
+  properties:
+  - type: OpenAPI
+    url: openapi/chase-uk-domestic-payment-consents-api-openapi.yml
+  - type: Documentation
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  - type: Documentation
+    url: https://www.chase.co.uk/gb/en/information-for-tpps/
+  - type: DeveloperPortal
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/
+- aid: chase-uk:chase-uk-domestic-payments-api
+  name: Chase UK Domestic Payments API
+  description: The Domestic Payments API from Chase UK — 3 operation(s) for domestic payments.
+  humanURL: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  tags:
+  - Domestic Payments
+  properties:
+  - type: OpenAPI
+    url: openapi/chase-uk-domestic-payments-api-openapi.yml
+  - type: Documentation
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  - type: Documentation
+    url: https://www.chase.co.uk/gb/en/information-for-tpps/
+  - type: DeveloperPortal
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/
+- aid: chase-uk:chase-uk-domestic-scheduled-payment-consents-api
+  name: Chase UK Domestic Scheduled Payment Consents API
+  description: >-
+    The Domestic Scheduled Payment Consents API from Chase UK — 2 operation(s) for domestic scheduled
+    payment consents.
+  humanURL: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  tags:
+  - Domestic Scheduled Payment Consents
+  properties:
+  - type: OpenAPI
+    url: openapi/chase-uk-domestic-scheduled-payment-consents-api-openapi.yml
+  - type: Documentation
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  - type: Documentation
+    url: https://www.chase.co.uk/gb/en/information-for-tpps/
+  - type: DeveloperPortal
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/
+- aid: chase-uk:chase-uk-domestic-scheduled-payments-api
+  name: Chase UK Domestic Scheduled Payments API
+  description: >-
+    The Domestic Scheduled Payments API from Chase UK — 3 operation(s) for domestic scheduled payments.
+  humanURL: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  tags:
+  - Domestic Scheduled Payments
+  properties:
+  - type: OpenAPI
+    url: openapi/chase-uk-domestic-scheduled-payments-api-openapi.yml
+  - type: Documentation
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  - type: Documentation
+    url: https://www.chase.co.uk/gb/en/information-for-tpps/
+  - type: DeveloperPortal
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/
+- aid: chase-uk:chase-uk-domestic-standing-order-consents-api
+  name: Chase UK Domestic Standing Order Consents API
+  description: >-
+    The Domestic Standing Order Consents API from Chase UK — 2 operation(s) for domestic standing order
+    consents.
+  humanURL: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  tags:
+  - Domestic Standing Order Consents
+  properties:
+  - type: OpenAPI
+    url: openapi/chase-uk-domestic-standing-order-consents-api-openapi.yml
+  - type: Documentation
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  - type: Documentation
+    url: https://www.chase.co.uk/gb/en/information-for-tpps/
+  - type: DeveloperPortal
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/
+- aid: chase-uk:chase-uk-domestic-standing-orders-api
+  name: Chase UK Domestic Standing Orders API
+  description: >-
+    The Domestic Standing Orders API from Chase UK — 3 operation(s) for domestic standing orders.
+  humanURL: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  tags:
+  - Domestic Standing Orders
+  properties:
+  - type: OpenAPI
+    url: openapi/chase-uk-domestic-standing-orders-api-openapi.yml
+  - type: Documentation
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  - type: Documentation
+    url: https://www.chase.co.uk/gb/en/information-for-tpps/
+  - type: DeveloperPortal
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/
+- aid: chase-uk:chase-uk-file-payment-consents-api
+  name: Chase UK File Payment Consents API
+  description: The File Payment Consents API from Chase UK — 3 operation(s) for file payment consents.
+  humanURL: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  tags:
+  - File Payment Consents
+  properties:
+  - type: OpenAPI
+    url: openapi/chase-uk-file-payment-consents-api-openapi.yml
+  - type: Documentation
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  - type: Documentation
+    url: https://www.chase.co.uk/gb/en/information-for-tpps/
+  - type: DeveloperPortal
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/
+- aid: chase-uk:chase-uk-file-payments-api
+  name: Chase UK File Payments API
+  description: The File Payments API from Chase UK — 4 operation(s) for file payments.
+  humanURL: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  tags:
+  - File Payments
+  properties:
+  - type: OpenAPI
+    url: openapi/chase-uk-file-payments-api-openapi.yml
+  - type: Documentation
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  - type: Documentation
+    url: https://www.chase.co.uk/gb/en/information-for-tpps/
+  - type: DeveloperPortal
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/
+- aid: chase-uk:chase-uk-funds-confirmation-consents-api
+  name: Chase UK Funds Confirmation Consents API
+  description: >-
+    The Funds Confirmation Consents API from Chase UK — 2 operation(s) for funds confirmation consents.
+  humanURL: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  tags:
+  - Funds Confirmation Consents
+  properties:
+  - type: OpenAPI
+    url: openapi/chase-uk-funds-confirmation-consents-api-openapi.yml
+  - type: Documentation
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  - type: Documentation
+    url: https://www.chase.co.uk/gb/en/information-for-tpps/
+  - type: DeveloperPortal
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/
+- aid: chase-uk:chase-uk-funds-confirmations-api
+  name: Chase UK Funds Confirmations API
+  description: The Funds Confirmations API from Chase UK — 1 operation(s) for funds confirmations.
+  humanURL: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  tags:
+  - Funds Confirmations
+  properties:
+  - type: OpenAPI
+    url: openapi/chase-uk-funds-confirmations-api-openapi.yml
+  - type: Documentation
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  - type: Documentation
+    url: https://www.chase.co.uk/gb/en/information-for-tpps/
+  - type: DeveloperPortal
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/
+- aid: chase-uk:chase-uk-international-payment-consents-api
+  name: Chase UK International Payment Consents API
+  description: >-
+    The International Payment Consents API from Chase UK — 3 operation(s) for international payment consents.
+  humanURL: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  tags:
+  - International Payment Consents
+  properties:
+  - type: OpenAPI
+    url: openapi/chase-uk-international-payment-consents-api-openapi.yml
+  - type: Documentation
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  - type: Documentation
+    url: https://www.chase.co.uk/gb/en/information-for-tpps/
+  - type: DeveloperPortal
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/
+- aid: chase-uk:chase-uk-international-payments-api
+  name: Chase UK International Payments API
+  description: >-
+    The International Payments API from Chase UK — 3 operation(s) for international payments.
+  humanURL: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  tags:
+  - International Payments
+  properties:
+  - type: OpenAPI
+    url: openapi/chase-uk-international-payments-api-openapi.yml
+  - type: Documentation
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  - type: Documentation
+    url: https://www.chase.co.uk/gb/en/information-for-tpps/
+  - type: DeveloperPortal
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/
+- aid: chase-uk:chase-uk-international-scheduled-payments-api
+  name: Chase UK International Scheduled Payments API
+  description: >-
+    The International Scheduled Payments API from Chase UK — 3 operation(s) for international scheduled
+    payments.
+  humanURL: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  tags:
+  - International Scheduled Payments
+  properties:
+  - type: OpenAPI
+    url: openapi/chase-uk-international-scheduled-payments-api-openapi.yml
+  - type: Documentation
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  - type: Documentation
+    url: https://www.chase.co.uk/gb/en/information-for-tpps/
+  - type: DeveloperPortal
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/
+- aid: chase-uk:chase-uk-international-scheduled-payments-consents-api
+  name: Chase UK International Scheduled Payments Consents API
+  description: >-
+    The International Scheduled Payments Consents API from Chase UK — 3 operation(s) for international
+    scheduled payments consents.
+  humanURL: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  tags:
+  - International Scheduled Payments Consents
+  properties:
+  - type: OpenAPI
+    url: openapi/chase-uk-international-scheduled-payments-consents-api-openapi.yml
+  - type: Documentation
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  - type: Documentation
+    url: https://www.chase.co.uk/gb/en/information-for-tpps/
+  - type: DeveloperPortal
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/
+- aid: chase-uk:chase-uk-international-standing-orders-api
+  name: Chase UK International Standing Orders API
+  description: >-
+    The International Standing Orders API from Chase UK — 3 operation(s) for international standing orders.
+  humanURL: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  tags:
+  - International Standing Orders
+  properties:
+  - type: OpenAPI
+    url: openapi/chase-uk-international-standing-orders-api-openapi.yml
+  - type: Documentation
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  - type: Documentation
+    url: https://www.chase.co.uk/gb/en/information-for-tpps/
+  - type: DeveloperPortal
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/
+- aid: chase-uk:chase-uk-international-standing-orders-consents-api
+  name: Chase UK International Standing Orders Consents API
+  description: >-
+    The International Standing Orders Consents API from Chase UK — 2 operation(s) for international standing
+    orders consents.
+  humanURL: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  tags:
+  - International Standing Orders Consents
+  properties:
+  - type: OpenAPI
+    url: openapi/chase-uk-international-standing-orders-consents-api-openapi.yml
+  - type: Documentation
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  - type: Documentation
+    url: https://www.chase.co.uk/gb/en/information-for-tpps/
+  - type: DeveloperPortal
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/
+- aid: chase-uk:chase-uk-offers-api
+  name: Chase UK Offers API
+  description: The Offers API from Chase UK — 2 operation(s) for offers.
+  humanURL: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  tags:
+  - Offers
+  properties:
+  - type: OpenAPI
+    url: openapi/chase-uk-offers-api-openapi.yml
+  - type: Documentation
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  - type: Documentation
+    url: https://www.chase.co.uk/gb/en/information-for-tpps/
+  - type: DeveloperPortal
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/
+- aid: chase-uk:chase-uk-parties-api
+  name: Chase UK Parties API
+  description: The Parties API from Chase UK — 3 operation(s) for parties.
+  humanURL: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  tags:
+  - Parties
+  properties:
+  - type: OpenAPI
+    url: openapi/chase-uk-parties-api-openapi.yml
+  - type: Documentation
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  - type: Documentation
+    url: https://www.chase.co.uk/gb/en/information-for-tpps/
+  - type: DeveloperPortal
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/
+- aid: chase-uk:chase-uk-products-api
+  name: Chase UK Products API
+  description: The Products API from Chase UK — 2 operation(s) for products.
+  humanURL: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  tags:
+  - Products
+  properties:
+  - type: OpenAPI
+    url: openapi/chase-uk-products-api-openapi.yml
+  - type: Documentation
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  - type: Documentation
+    url: https://www.chase.co.uk/gb/en/information-for-tpps/
+  - type: DeveloperPortal
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/
+- aid: chase-uk:chase-uk-scheduled-payments-api
+  name: Chase UK Scheduled Payments API
+  description: The Scheduled Payments API from Chase UK — 2 operation(s) for scheduled payments.
+  humanURL: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  tags:
+  - Scheduled Payments
+  properties:
+  - type: OpenAPI
+    url: openapi/chase-uk-scheduled-payments-api-openapi.yml
+  - type: Documentation
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  - type: Documentation
+    url: https://www.chase.co.uk/gb/en/information-for-tpps/
+  - type: DeveloperPortal
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/
+- aid: chase-uk:chase-uk-standing-orders-api
+  name: Chase UK Standing Orders API
+  description: The Standing Orders API from Chase UK — 2 operation(s) for standing orders.
+  humanURL: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  tags:
+  - Standing Orders
+  properties:
+  - type: OpenAPI
+    url: openapi/chase-uk-standing-orders-api-openapi.yml
+  - type: Documentation
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  - type: Documentation
+    url: https://www.chase.co.uk/gb/en/information-for-tpps/
+  - type: DeveloperPortal
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/
+- aid: chase-uk:chase-uk-statements-api
+  name: Chase UK Statements API
+  description: The Statements API from Chase UK — 5 operation(s) for statements.
+  humanURL: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  tags:
+  - Statements
+  properties:
+  - type: OpenAPI
+    url: openapi/chase-uk-statements-api-openapi.yml
+  - type: Documentation
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  - type: Documentation
+    url: https://www.chase.co.uk/gb/en/information-for-tpps/
+  - type: DeveloperPortal
+    url: https://developer.openbanking-obie-sandbox.chase.co.uk/
+- aid: chase-uk:chase-uk-transactions-api
+  name: Chase UK Transactions API
+  description: The Transactions API from Chase UK — 2 operation(s) for transactions.
+  humanURL: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
+  tags:
+  - Transactions
+  properties:
+  - type: OpenAPI
+    url: openapi/chase-uk-transactions-api-openapi.yml
   - type: Documentation
     url: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
   - type: Documentation
