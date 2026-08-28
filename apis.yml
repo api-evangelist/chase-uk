@@ -18,6 +18,18 @@ description: >-
   granted through its developer sandbox and secured with FAPI-grade OAuth2/OIDC,
   PSD2 strong customer authentication, and mutual-TLS using eIDAS QWAC or OBWAC
   certificates from the Open Banking Certificate Authority.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
 - Financial-Services
