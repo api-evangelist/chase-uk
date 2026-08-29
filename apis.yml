@@ -496,6 +496,9 @@ apis:
   - type: DeveloperPortal
     url: https://developer.openbanking-obie-sandbox.chase.co.uk/
 common:
+- type: CapabilityMap
+  url: capabilities/chase-uk-capability-edges.yml
+  name: Chase UK Business Capability Map
 - type: DomainSecurity
   url: security/chase-uk-domain-security.yml
 - type: AgenticAccess

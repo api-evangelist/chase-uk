@@ -1,0 +1,182 @@
+slug: chase-uk
+provider: Chase UK
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Banking & Capital Markets
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 18
+edges:
+- tag: Domestic Payments
+  spec_file: chase-uk-domestic-payments-api-openapi.yml
+  capability_id: BC-1340.10
+  capability_id_l1: BC-1340
+  capability_name: Payment Initiation Management
+  confidence: 0.9
+  evidence: POST /domestic-payments  CreateDomesticPayments  Initiate a Domestic Payment
+  reason: Initiates and retrieves domestic payments under the Open Banking Payment Initiation spec — payment
+    initiation.
+- tag: Domestic Scheduled Payments
+  spec_file: chase-uk-domestic-scheduled-payments-api-openapi.yml
+  capability_id: BC-1340.10
+  capability_id_l1: BC-1340
+  capability_name: Payment Initiation Management
+  confidence: 0.9
+  evidence: POST /domestic-scheduled-payments 'Initiate a Domestic Scheduled Payment'
+  reason: Operations initiate and retrieve domestic scheduled payment instructions — payment initiation
+    management.
+- tag: Domestic Scheduled Payment Consents
+  spec_file: chase-uk-domestic-scheduled-payment-consents-api-openapi.yml
+  capability_id: BC-1340.10
+  capability_id_l1: BC-1340
+  capability_name: Payment Initiation Management
+  confidence: 0.88
+  evidence: POST /domestic-scheduled-payment-consents — 'Create a Domestic Scheduled Payment Consent';
+    schema OBWriteDomesticScheduledConsent4
+  reason: 'Open Banking Payment Initiation API: capture and authorisation of a domestic scheduled payment
+    instruction via consent, which is payment initiation (instruction capture, validation, authorisation).'
+- tag: Domestic Standing Orders
+  spec_file: chase-uk-domestic-standing-orders-api-openapi.yml
+  capability_id: BC-1340.10
+  capability_id_l1: BC-1340
+  capability_name: Payment Initiation Management
+  confidence: 0.88
+  evidence: POST /domestic-standing-orders 'Submit a Domestic Standing Order'; schema OBWriteDomesticStandingOrder3
+  reason: Submission and retrieval of domestic standing order payment instructions — payment initiation.
+- tag: Domestic Payment Consents
+  spec_file: chase-uk-domestic-payment-consents-api-openapi.yml
+  capability_id: BC-1340.10
+  capability_id_l1: BC-1340
+  capability_name: Payment Initiation Management
+  confidence: 0.85
+  evidence: POST /domestic-payment-consents  Create a Domestic Payment Consent; GET .../funds-confirmation  Confirm
+    availability of funds for a Domestic Payment
+  reason: Payment instruction capture, validation and authorisation consent for domestic payments — Payment
+    Initiation Management.
+- tag: Domestic Standing Order Consents
+  spec_file: chase-uk-domestic-standing-order-consents-api-openapi.yml
+  capability_id: BC-1340.10
+  capability_id_l1: BC-1340
+  capability_name: Payment Initiation Management
+  confidence: 0.85
+  evidence: POST /domestic-standing-order-consents 'Create a Domestic Standing Order Consent'
+  reason: Consent capture/authorisation for a recurring domestic payment instruction under Open Banking
+    payment initiation.
+- tag: International Payments
+  spec_file: chase-uk-international-payments-api-openapi.yml
+  capability_id: BC-1340.40
+  capability_id_l1: BC-1340
+  capability_name: Cross-Border Payment Management
+  confidence: 0.85
+  evidence: POST /international-payments 'Initiate an International Payment'
+  reason: Initiation and tracking of international (cross-border) payment instructions.
+- tag: International Scheduled Payments
+  spec_file: chase-uk-international-scheduled-payments-api-openapi.yml
+  capability_id: BC-1340.40
+  capability_id_l1: BC-1340
+  capability_name: Cross-Border Payment Management
+  confidence: 0.85
+  evidence: POST /international-scheduled-payments 'Initiate an International Scheduled Payment'; schema
+    OBWriteInternationalScheduledResponse6
+  reason: Initiation of scheduled cross-border payment instructions — cross-border payment management.
+- tag: Parties
+  spec_file: chase-uk-parties-api-openapi.yml
+  capability_id: BC-1300.40
+  capability_id_l1: BC-1300
+  capability_name: Customer Information Management
+  confidence: 0.8
+  evidence: GET /accounts/{AccountId}/parties  "Get Parties for an AccountId"; schemas OBReadParty3, FullLegalName,
+    EmailAddress, OBPostalAddress7
+  reason: Returns account-holder / party identity and contact details for a retail bank customer — banking
+    customer information management, not a technical object.
+- tag: File Payments
+  spec_file: chase-uk-file-payments-api-openapi.yml
+  capability_id: BC-1340.10
+  capability_id_l1: BC-1340
+  capability_name: Payment Initiation Management
+  confidence: 0.78
+  evidence: POST /file-payments 'Submit a File Payment'; GET /file-payments/{FilePaymentId}/payment-details
+  reason: Submission and status tracking of bulk file-based payment instructions under Payment Initiation.
+- tag: Products
+  spec_file: chase-uk-products-api-openapi.yml
+  capability_id: BC-1310.10
+  capability_id_l1: BC-1310
+  capability_name: Product Catalogue Management
+  confidence: 0.78
+  evidence: GET /products  "Get Products"; schemas OB_OverdraftFeeType1Code, OB_FeeFrequency1Code_4
+  reason: Exposes the bank's product master/catalogue and product terms (overdraft fee types, rates) for
+    accounts — banking product catalogue management.
+- tag: Accounts
+  spec_file: chase-uk-accounts-api-openapi.yml
+  capability_id: BC-1330.10
+  capability_id_l1: BC-1330
+  capability_name: Deposit Account Management
+  confidence: 0.75
+  evidence: GET /accounts  GetAccounts; schema OBAccount6, Nickname, MaturityDate
+  reason: Open Banking account information API exposing retail current/savings account details for a digital
+    retail bank — deposit account information.
+- tag: File Payment Consents
+  spec_file: chase-uk-file-payment-consents-api-openapi.yml
+  capability_id: BC-1340.10
+  capability_id_l1: BC-1340
+  capability_name: Payment Initiation Management
+  confidence: 0.75
+  evidence: POST /file-payment-consents 'Create a File Payment Consent'; POST /file-payment-consents/{ConsentId}/file
+    'Upload a File for a ConsentId'
+  reason: Bulk/batch payment file consent and upload under the Payment Initiation API; the file upload
+    is the mechanism, the business act is capturing and authorising payment instructions.
+- tag: International Payment Consents
+  spec_file: chase-uk-international-payment-consents-api-openapi.yml
+  capability_id: BC-1340.40
+  capability_id_l1: BC-1340
+  capability_name: Cross-Border Payment Management
+  confidence: 0.75
+  evidence: POST /international-payment-consents 'Create an International Payment Consent'; GET .../funds-confirmation
+    'Confirm Funds Availability for an International Payment'
+  reason: Consent capture for cross-border payment instructions under Open Banking Payment Initiation;
+    international scope points to cross-border payment management.
+- tag: International Scheduled Payments Consents
+  spec_file: chase-uk-international-scheduled-payments-consents-api-openapi.yml
+  capability_id: BC-1340.40
+  capability_id_l1: BC-1340
+  capability_name: Cross-Border Payment Management
+  confidence: 0.75
+  evidence: POST /international-scheduled-payment-consents 'Create an International Scheduled Payment
+    Consent'
+  reason: Consent capture and funds-availability confirmation for scheduled international payments under
+    Payment Initiation.
+- tag: Balances
+  spec_file: chase-uk-balances-api-openapi.yml
+  capability_id: BC-1330.10
+  capability_id_l1: BC-1330
+  capability_name: Deposit Account Management
+  confidence: 0.7
+  evidence: GET /accounts/{AccountId}/balances  GetAccountsAccountIdBalances  Get Balances for an AccountId
+  reason: Retrieval of deposit account balances for retail bank accounts; sits within deposit account
+    management/servicing. Some ambiguity vs customer servicing.
+- tag: Direct Debits
+  spec_file: chase-uk-direct-debits-api-openapi.yml
+  capability_id: BC-1340.10
+  capability_id_l1: BC-1340
+  capability_name: Payment Initiation Management
+  confidence: 0.7
+  evidence: GET /accounts/{AccountId}/direct-debits; schema OBMandateRelatedInformation1, ExternalMandateStatus1Code
+  reason: Exposes direct debit mandates and previous payment dates on the account — recurring payment
+    mandate/instruction information, within payments management.
+- tag: International Standing Orders
+  spec_file: chase-uk-international-standing-orders-api-openapi.yml
+  capability_id: BC-1340.40
+  capability_id_l1: BC-1340
+  capability_name: Cross-Border Payment Management
+  confidence: 0.7
+  evidence: POST /international-standing-orders  "Submit an International Standing Order"
+  reason: Open Banking Payment Initiation surface for submitting and retrieving international (cross-border)
+    standing order payments; schemas like OBWriteInternationalStandingOrderResponse7 and CountryCode confirm
+    outbound international payment instructions. Cross-border payment management is the most specific
+    fit, though plain payment initiation is an alternative reading.
