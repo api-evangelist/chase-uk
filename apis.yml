@@ -78,6 +78,8 @@ apis:
   description: The Accounts API from Chase UK — 2 operation(s) for accounts.
   humanURL: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
   tags:
+  - Account
+  tags_raw:
   - Accounts
   properties:
   - type: OpenAPI
@@ -425,6 +427,8 @@ apis:
   description: The Products API from Chase UK — 2 operation(s) for products.
   humanURL: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
   tags:
+  - Product
+  tags_raw:
   - Products
   properties:
   - type: OpenAPI
@@ -485,6 +489,8 @@ apis:
   description: The Transactions API from Chase UK — 2 operation(s) for transactions.
   humanURL: https://developer.openbanking-obie-sandbox.chase.co.uk/docs/
   tags:
+  - Transaction
+  tags_raw:
   - Transactions
   properties:
   - type: OpenAPI
