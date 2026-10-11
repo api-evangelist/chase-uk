@@ -1,0 +1,16 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/chase-uk/integrations
+- https://n8n.io/integrations/chase-uk/
+- https://composio.dev/toolkits/chase-uk
+- https://monid.ai/tools/chase-uk
+checked:
+- https://composio.dev/toolkits/chase-uk
+- https://monid.ai/tools/chase-uk
+- https://n8n.io/integrations/chase-uk/
+- https://zapier.com/apps/chase-uk/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
