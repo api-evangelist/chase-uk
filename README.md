@@ -1,4 +1,4 @@
-# Chase UK (chase-uk)
+# Chase UK
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,103 +64,143 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Chase UK is the digital retail bank operated in the United Kingdom by J.P. Morgan Europe Limited, a wholly owned subsidiary of JPMorgan Chase & Co. that launched the Chase consumer brand in the UK in September 2021. It is an app-only challenger bank with no physical branches or ATM estate, authorised and regulated by the FCA and PRA. As a UK account provider (ASPSP) it operates a dedicated Open Banking interface conformant to the OBIE Read/Write API Standard, exposing Account Information (AIS), Payment Initiation (PIS), and Confirmation of Funds (CBPII) services to FCA-authorised third-party providers.
+Chase UK is the digital retail bank operated in the United Kingdom by J.P. Morgan Europe Limited, a wholly owned subsidiary of JPMorgan Chase & Co. that launched the Chase consumer brand in the UK in September 2021. It is an app-only challenger bank with no physical branches or ATM estate, offering current accounts, savings, and round-up features to personal customers, and is authorised and regulated in the UK by the Financial Conduct Authority (FCA) and the Prudential Regulation Authority (PRA). As a Payment Services Regulations 2017 account provider (ASPSP), Chase UK operates a dedicated Open Banking interface conformant to the UK Open Banking Implementation Entity (OBIE) Read/Write API Standard, exposing Account Information (AIS), Payment Initiation (PIS), and Confirmation of Funds (CBPII) services to FCA-authorised third-party providers. It is not one of the CMA9 mandated banks; access is granted through its developer sandbox and secured with FAPI-grade OAuth2/OIDC, PSD2 strong customer authentication, and mutual-TLS using eIDAS QWAC or OBWAC certificates from the Open Banking Certificate Authority.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/chase-uk/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/chase-uk/refs/heads/main/apis.yml)
+**Areas:** Financial Services · Banking · Open Banking · PSD2 · OBIE · United Kingdom · Payments · Account Information · Challenger Bank · Fintech
 
-## Tags
+## Chase UK on APIs.io
 
-- Financial Services
-- Banking
-- Open Banking
-- PSD2
-- OBIE
-- United Kingdom
-- Payments
-- Account Information
-- Challenger Bank
-- Fintech
+Everything profiled for Chase UK is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/chase-uk/](https://apis.io/providers/chase-uk/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (28)
 
-- **Created:** 2026-07-23
-- **Modified:** 2026-07-23
+- [Chase UK Account Access Consents API](https://apis.io/apis/chase-uk/chase-uk-account-access-consents-api/) — The Account Access Consents API from Chase UK — 2 operation(s) for account access consents.
+- [Chase UK Accounts API](https://apis.io/apis/chase-uk/chase-uk-accounts-api/) — The Accounts API from Chase UK — 2 operation(s) for accounts.
+- [Chase UK Balances API](https://apis.io/apis/chase-uk/chase-uk-balances-api/) — The Balances API from Chase UK — 2 operation(s) for balances.
+- [Chase UK Beneficiaries API](https://apis.io/apis/chase-uk/chase-uk-beneficiaries-api/) — The Beneficiaries API from Chase UK — 2 operation(s) for beneficiaries.
+- [Chase UK Direct Debits API](https://apis.io/apis/chase-uk/chase-uk-direct-debits-api/) — The Direct Debits API from Chase UK — 2 operation(s) for direct debits.
+- [Chase UK Domestic Payment Consents API](https://apis.io/apis/chase-uk/chase-uk-domestic-payment-consents-api/) — The Domestic Payment Consents API from Chase UK — 3 operation(s) for domestic payment consents.
+- [Chase UK Domestic Payments API](https://apis.io/apis/chase-uk/chase-uk-domestic-payments-api/) — The Domestic Payments API from Chase UK — 3 operation(s) for domestic payments.
+- [Chase UK Domestic Scheduled Payment Consents API](https://apis.io/apis/chase-uk/chase-uk-domestic-scheduled-payment-consents-api/) — The Domestic Scheduled Payment Consents API from Chase UK — 2 operation(s) for domestic scheduled payment consents.
+- [Chase UK Domestic Scheduled Payments API](https://apis.io/apis/chase-uk/chase-uk-domestic-scheduled-payments-api/) — The Domestic Scheduled Payments API from Chase UK — 3 operation(s) for domestic scheduled payments.
+- [Chase UK Domestic Standing Order Consents API](https://apis.io/apis/chase-uk/chase-uk-domestic-standing-order-consents-api/) — The Domestic Standing Order Consents API from Chase UK — 2 operation(s) for domestic standing order consents.
+- [Chase UK Domestic Standing Orders API](https://apis.io/apis/chase-uk/chase-uk-domestic-standing-orders-api/) — The Domestic Standing Orders API from Chase UK — 3 operation(s) for domestic standing orders.
+- [Chase UK File Payment Consents API](https://apis.io/apis/chase-uk/chase-uk-file-payment-consents-api/) — The File Payment Consents API from Chase UK — 3 operation(s) for file payment consents.
+- [Chase UK File Payments API](https://apis.io/apis/chase-uk/chase-uk-file-payments-api/) — The File Payments API from Chase UK — 4 operation(s) for file payments.
+- [Chase UK Funds Confirmation Consents API](https://apis.io/apis/chase-uk/chase-uk-funds-confirmation-consents-api/) — The Funds Confirmation Consents API from Chase UK — 2 operation(s) for funds confirmation consents.
+- [Chase UK Funds Confirmations API](https://apis.io/apis/chase-uk/chase-uk-funds-confirmations-api/) — The Funds Confirmations API from Chase UK — 1 operation(s) for funds confirmations.
+- [Chase UK International Payment Consents API](https://apis.io/apis/chase-uk/chase-uk-international-payment-consents-api/) — The International Payment Consents API from Chase UK — 3 operation(s) for international payment consents.
+- [Chase UK International Payments API](https://apis.io/apis/chase-uk/chase-uk-international-payments-api/) — The International Payments API from Chase UK — 3 operation(s) for international payments.
+- [Chase UK International Scheduled Payments API](https://apis.io/apis/chase-uk/chase-uk-international-scheduled-payments-api/) — The International Scheduled Payments API from Chase UK — 3 operation(s) for international scheduled payments.
+- [Chase UK International Scheduled Payments Consents API](https://apis.io/apis/chase-uk/chase-uk-international-scheduled-payments-consents-api/) — The International Scheduled Payments Consents API from Chase UK — 3 operation(s) for international scheduled payments consents.
+- [Chase UK International Standing Orders API](https://apis.io/apis/chase-uk/chase-uk-international-standing-orders-api/) — The International Standing Orders API from Chase UK — 3 operation(s) for international standing orders.
+- [Chase UK International Standing Orders Consents API](https://apis.io/apis/chase-uk/chase-uk-international-standing-orders-consents-api/) — The International Standing Orders Consents API from Chase UK — 2 operation(s) for international standing orders consents.
+- [Chase UK Offers API](https://apis.io/apis/chase-uk/chase-uk-offers-api/) — The Offers API from Chase UK — 2 operation(s) for offers.
+- [Chase UK Parties API](https://apis.io/apis/chase-uk/chase-uk-parties-api/) — The Parties API from Chase UK — 3 operation(s) for parties.
+- [Chase UK Products API](https://apis.io/apis/chase-uk/chase-uk-products-api/) — The Products API from Chase UK — 2 operation(s) for products.
+- [Chase UK Scheduled Payments API](https://apis.io/apis/chase-uk/chase-uk-scheduled-payments-api/) — The Scheduled Payments API from Chase UK — 2 operation(s) for scheduled payments.
+- [Chase UK Standing Orders API](https://apis.io/apis/chase-uk/chase-uk-standing-orders-api/) — The Standing Orders API from Chase UK — 2 operation(s) for standing orders.
+- [Chase UK Statements API](https://apis.io/apis/chase-uk/chase-uk-statements-api/) — The Statements API from Chase UK — 5 operation(s) for statements.
+- [Chase UK Transactions API](https://apis.io/apis/chase-uk/chase-uk-transactions-api/) — The Transactions API from Chase UK — 2 operation(s) for transactions.
 
-## APIs
+### Published properties
 
-### Chase UK Account and Transaction Information API (AIS)
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-Chase UK's Account Information Service (AIS) dedicated interface, conformant to the OBIE Read/Write API Standard, letting FCA-authorised AISPs retrieve a consenting customer's account, balance, transaction, beneficiary, standing order, direct debit, and statement data. Access is gated behind developer onboarding and secured with FAPI OAuth2/OIDC, PSD2 SCA, and mutual-TLS.
+#### MCP servers (1)
 
-- **Human URL:** [https://developer.openbanking-obie-sandbox.chase.co.uk/docs/](https://developer.openbanking-obie-sandbox.chase.co.uk/docs/)
+Model Context Protocol servers that expose the API to agents.
 
-#### Tags
+- [chase-uk](https://apis.io/servers/chase-uk/chase-uk/)
 
-- Account Information
-- AISP
-- Open Banking
+#### Agentic access (1)
 
-#### Properties
+Which operations an agent can call, which act, and which need a human in the loop.
 
-- [OpenAPI](openapi/obie-account-info-openapi.yaml) — shared OBIE Read/Write standard v4.0.1 (not a Chase-proprietary contract)
-- [Documentation](https://developer.openbanking-obie-sandbox.chase.co.uk/docs/)
-- [Info for TPPs](https://www.chase.co.uk/gb/en/information-for-tpps/)
-- [Developer Portal](https://developer.openbanking-obie-sandbox.chase.co.uk/)
+- [Chase Uk Agentic Access](https://apis.io/agentic-access/chase-uk/chase-uk-agentic-access/)
 
-### Chase UK Payment Initiation API (PIS)
+#### Overlays (3)
 
-Chase UK's Payment Initiation Service (PIS) dedicated interface, conformant to the OBIE Read/Write API Standard, enabling FCA-authorised PISPs to create single immediate payments, future-dated payments, and standing orders to UK accounts on behalf of a consenting customer. Access is gated behind developer onboarding and secured with FAPI OAuth2/OIDC, PSD2 SCA, and mutual-TLS.
+OpenAPI overlays, including conversational phrasing for each operation.
 
-- **Human URL:** [https://developer.openbanking-obie-sandbox.chase.co.uk/docs/](https://developer.openbanking-obie-sandbox.chase.co.uk/docs/)
+- [Chase Uk Account Info Overlay](https://apis.io/overlays/chase-uk/chase-uk-account-info-overlay/)
+- [Chase Uk Confirmation Funds Overlay](https://apis.io/overlays/chase-uk/chase-uk-confirmation-funds-overlay/)
+- [Chase Uk Payment Initiation Overlay](https://apis.io/overlays/chase-uk/chase-uk-payment-initiation-overlay/)
 
-#### Tags
+#### Security (2)
 
-- Payment Initiation
-- PISP
-- Payments
+Authentication, trust centre, and vulnerability disclosure.
 
-#### Properties
+- [Chase Uk Authentication](https://apis.io/security/chase-uk/chase-uk-authentication/)
+- [Chase Uk Domain Security](https://apis.io/security/chase-uk/chase-uk-domain-security/)
 
-- [OpenAPI](openapi/obie-payment-initiation-openapi.yaml) — shared OBIE Read/Write standard v4.0.1 (not a Chase-proprietary contract)
-- [Documentation](https://developer.openbanking-obie-sandbox.chase.co.uk/docs/)
-- [Info for TPPs](https://www.chase.co.uk/gb/en/information-for-tpps/)
-- [Developer Portal](https://developer.openbanking-obie-sandbox.chase.co.uk/)
+#### OAuth scopes (1)
 
-### Chase UK Confirmation of Funds API (CBPII)
+The permissions the API asks for.
 
-Chase UK's Confirmation of Funds (CBPII) dedicated interface, conformant to the OBIE Read/Write API Standard, allowing an FCA-authorised card-based payment instrument issuer to check whether a specified amount is available on a consenting customer's account. Access is gated behind developer onboarding and secured with FAPI OAuth2/OIDC, PSD2 SCA, and mutual-TLS.
+- [Chase Uk Scopes](https://apis.io/scopes/chase-uk/chase-uk-scopes/)
 
-- **Human URL:** [https://developer.openbanking-obie-sandbox.chase.co.uk/docs/](https://developer.openbanking-obie-sandbox.chase.co.uk/docs/)
+## Where to find this API
 
-#### Tags
-
-- Confirmation of Funds
-- CBPII
-- Open Banking
-
-#### Properties
-
-- [OpenAPI](openapi/obie-confirmation-funds-openapi.yaml) — shared OBIE Read/Write standard v4.0.1 (not a Chase-proprietary contract)
-- [Documentation](https://developer.openbanking-obie-sandbox.chase.co.uk/docs/)
-- [Info for TPPs](https://www.chase.co.uk/gb/en/information-for-tpps/)
-- [Developer Portal](https://developer.openbanking-obie-sandbox.chase.co.uk/)
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.chase.co.uk/)
-- [Developer Portal](https://developer.openbanking-obie-sandbox.chase.co.uk/)
 - [Documentation](https://developer.openbanking-obie-sandbox.chase.co.uk/docs/)
-- [Getting Started (Info for TPPs)](https://www.chase.co.uk/gb/en/information-for-tpps/)
+- [Getting started](https://www.chase.co.uk/gb/en/information-for-tpps/)
 - [Support](https://www.chase.co.uk/gb/en/support/contact-us/)
-- [Terms of Service](https://www.chase.co.uk/gb/en/legal/general-terms-and-conditions/)
-- [Privacy Policy](https://www.chase.co.uk/gb/en/legal/privacy-notice/)
-- [LinkedIn](https://www.linkedin.com/company/chase/)
+- [Compliance](https://www.chase.co.uk/gb/en/information-for-tpps/)
+- [Terms of service](https://www.chase.co.uk/gb/en/legal/general-terms-and-conditions/)
+- [Privacy policy](https://www.chase.co.uk/gb/en/legal/privacy-notice/)
 
-## Notes
+## API Evangelist rating
 
-Chase UK is app-only with no branch or ATM estate, so it does **not** publish OBIE Open Data APIs (ATMs / Branches / Personal & Business Current Accounts). Its only public API posture is the FAPI-secured OBIE Read/Write dedicated interface, reachable through the sandbox developer portal after FCA-authorised onboarding. TPP enquiries: open.banking@chase.com.
+**Kin Score 37.4** — thin · rubric 0.24.0 · scored 2026-10-17
 
-## Maintainers
+| Facet | Score |
+|---|---|
+| Discoverability | 69.6 |
+| Contract quality | 49.0 |
+| Contract governance | 4.5 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 47.0 |
+| Access clarity | 28.9 |
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Agent readiness 35.4** — agent-ready
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | negotiable (partial credit) |
+| Idempotency | verified |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | verified |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | documented (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 41.7** — Banking & Open Finance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/chase-uk/](https://apis.io/providers/chase-uk/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Chase UK: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/chase-uk/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
